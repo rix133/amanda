@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title>test</title>
+  </head>
+
+  <body>
+          <script src="dist/hls.js"></script>
+          <video height="100%" id="video" controls anonymous>
+            <track kind="metadata" src="vtt/metainfo.vtt" srclang="en"
+            label="info">
+          </video>
+
+
+      <script>
+
+    
+
+        if(Hls.isSupported()) {
+          var video = document.getElementById('video');
+          var hls = new Hls({
+              debug: false
+          });
+          hls.loadSource('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8');
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MEDIA_ATTACHED, function() {
+            video.muted = true;
+            var metaTrack = video.textTracks[0];
+
+            
+            metaTrack.mode = "hidden"; 
+            metaTrack.oncuechange = function(e) {
+                var cue = this.activeCues[0];
+                if(cue){
+                    var data = JSON.parse(cue.text);
+                    console.log(data);
+                    console.log(e);
+                    
+                    cue.onexit = function(e){
+                        video.currentTime = this.startTime;
+                    }
+                }
+            }
+            video.play();
+            
+        });
+       }
+      </script>
+
+  </body>
+</html>
