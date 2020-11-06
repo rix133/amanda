@@ -1,0 +1,51 @@
+.video-player {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+
+.video-player video{
+    width: 100%;
+    display: block;
+}
+
+@keyframes fadein {
+    from {opacity: 0%; }
+    to {opacity: 100%; }
+  }
+
+
+.video-player .watch-button{
+   display: inline;
+   position: absolute;
+   bottom: 23%;
+   left: 75%;
+   z-index: 50;
+   animation-name: fadein;
+   animation-duration: 1s;
+   animation-delay: 2.4s;
+   animation-fill-mode: both;
+}
+
+
+.watch-button img{
+    display: inline;
+    width: 80%;
+}
+
+.watch-button:hover .btn-down{
+    display: inline;
+    cursor: pointer;
+}
+
+.watch-button:hover .btn-up {
+    display: none;
+    
+}
+
+
+ .video-player .hidden {
+    display: none;
+ }

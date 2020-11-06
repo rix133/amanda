@@ -1,0 +1,26 @@
+{
+  "name": "amanda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rix133/amanda.git"
+  },
+  "author": "Richard Meitern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rix133/amanda/issues"
+  },
+  "homepage": "https://github.com/rix133/amanda#readme",
+  "dependencies": {
+    "hls.js": "^0.14.16"
+  },
+  "devDependencies": {
+    "@types/hls.js": "^0.13.2",
+    "reload": "^3.1.1"
+  }
+}
