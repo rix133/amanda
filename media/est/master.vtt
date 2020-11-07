@@ -14,11 +14,12 @@ a_loop
     "chapterID": "a",
     "type": "loop", 
     "displayClass": "watch-button", 
-    "nextChapterID": "b_intro"
+    "nextChapterID": "b_intro",
+    "previousChapterID": "a_intro"
 }
 
 b_intro
-00:00:23.100 --> 00:01:23.000
+00:00:23.600 --> 00:01:23.000
 {
     "chapterID": "b",
     "type": "intro",  

@@ -1,11 +1,15 @@
 function nextChapter(){
     var nextChapter = cue.data.nextChapterID;
-    cue.forcedExit = true;
-    var nextTimepoint = cues[nextChapter].startTime;
-    video.currentTime = nextTimepoint;
+    goToChapter(nextChapter);
+}
+
+function previousChapter(){
+    var nextChapter = cue.data.previousChapterID;
+    goToChapter(nextChapter);
 }
 
 function goToChapter(cueID){
+    cue.forcedExit = true;
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
 }
@@ -78,7 +82,7 @@ if(Hls.isSupported()) {
                   if(this.data.type == "question"){
                     if(activeOverlay){
                         activeOverlay.className ="hidden";
-                        goToChapter(this.parentCueID);
+                        goToChapter(this.previousChapterID);
                     }
                   }
                   
