@@ -1,21 +1,29 @@
-<html>
-
+<html lang="et">
+  <meta charset="UTF-8">
   <head>
-    <title>test</title>
+    <title>Amanda läheb operatsioonile</title>
     <script src="node_modules/hls.js/dist/hls.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
-    <div class="video-player">
+    <div class="player">
     <div id="watch-button" class="hidden" >
       <img class="btn-up" src="assets/buttons/edasi_Edasi.png" alt="Vaata filmi!">
       <img class="btn-down hidden" src="assets/buttons/edasi_Edasi_all.png" alt="Vaata filmi!" onclick="nextChapter()">
     </div>
-    <video id="video">
+    <video id="video" class="player__video viewer" >
             <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
 
     </video>
+     <!-- video controls -->
+    <div class="player__controls">
+      <button class="player__button toggle" title="Toggle Play">►</button>
+      <button class="fullscreen-btn">FS</button>
+    </div>
+  </div>
+
+
   </div>
     <script src="index.js"></script>  
 

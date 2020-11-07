@@ -1,15 +1,114 @@
-.video-player {
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    min-height:100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .player {
+    width:100%;
     position: relative;
+    font-size: 0;
+    overflow: hidden;
+  }
+  
+  /* This css is only applied when fullscreen is active. */
+  .player:fullscreen {
+    max-width: none;
     width: 100%;
-    margin: 0 auto;
-    padding: 2px;
-}
-
-
-.video-player video{
+  }
+  
+  .player:-webkit-full-screen {
+    max-width: none;
     width: 100%;
-    display: block;
-}
+  }
+  
+  .player__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .player__button {
+    background:none;
+    border:0;
+    line-height:1;
+    color:white;
+    text-align: center;
+    outline:0;
+    padding: 0;
+    cursor:pointer;
+    max-width:40px;
+  }
+  
+  .player__button:focus {
+    border-color: #ffc600;
+  }
+  
+  .player__slider {
+    width:10px;
+    height:30px;
+  }
+  
+  .player__controls {
+    display:inline;
+    position: absolute;
+    left: 0;
+    bottom:2%;
+    width: 100%;
+    flex-wrap:wrap;
+    color: #fff;
+    z-index: 2147483648; 
+    /* This is ridiculous so that it overrides the shadow 
+    dom and shows the custom player in full screen mode instead */
+  }
+  
+  .player:hover .player__controls {
+    transform: translateY(0);
+  }
+  
+  
+  .player__controls > * {
+    flex:1;
+  }
+  
+
+  
+  .current,
+  .duration,
+  .fullscreen-btn {
+    max-width: 30px;
+    color: #fff;
+    font-size: 10px;
+    margin: auto 0px;
+    padding: 0 7px;
+  }
+  
+  .fullscreen-btn {
+    color: #000;
+    margin: auto 6px;
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    border: 0;
+  }
+  
+  video::-webkit-media-controls {
+    display:none !important;
+  }
+  
+
+/*amanda items start here*/
 
 @keyframes fadein {
     from {opacity: 0%; }
@@ -17,7 +116,7 @@
   }
 
 
-.video-player .watch-button{
+.player .watch-button{
    display: inline;
    position: absolute;
    bottom: 23%;
@@ -30,7 +129,7 @@
 }
 
 
-.watch-button img{
+img{
     display: inline;
     width: 80%;
 }
@@ -46,6 +145,6 @@
 }
 
 
- .video-player .hidden {
+ .player .hidden {
     display: none;
  }

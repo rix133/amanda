@@ -1,3 +1,73 @@
+ // basic control functions
+
+/* Get our elements */ 
+
+
+const player       =  document.querySelector('.player');
+
+const video        =  player.querySelector('.viewer');
+
+const toggle       =  player.querySelector('.toggle');
+
+const fullscreen   =  player.querySelector('.fullscreen-btn');
+
+
+
+
+/* Build out functions */ 
+
+
+// toggle play/pause
+function togglePlay() {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+}
+
+// Detect press of spacebar, toggle play
+function detectKeypress(e) {
+	if (e.keyCode == 32) {
+	  togglePlay();
+	} else {
+      return;
+	}
+}
+
+// Update button on play/pause
+function updateButton() {
+  const icon = this.paused ? '►' : '❚ ❚';
+  toggle.textContent = icon;
+}
+
+// Create fullscreen video button
+function toggleFullscreen() {
+	if(player.requestFullScreen){
+		player.requestFullScreen();
+	} else if(player.webkitRequestFullScreen){
+		player.webkitRequestFullScreen();
+	} else if(player.mozRequestFullScreen){
+		player.mozRequestFullScreen();
+	}
+}
+
+
+
+
+/* Hook up the event listeners */ 
+
+
+// Click events
+toggle.addEventListener('click', togglePlay);
+fullscreen.addEventListener('click', toggleFullscreen);
+
+// Keypress (Play/Pause)
+//window.addEventListener('keydown', detectKeypress);
+
+// Play/Pause events 
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+
+
+
 function nextChapter(){
     var nextChapter = cue.data.nextChapterID;
     goToChapter(nextChapter);
@@ -25,15 +95,15 @@ function parseRawCues(cues){
 }
 
 
-
-if(Hls.isSupported()) {
-    var video = document.getElementById('video');
-    var activeOverlay;
+var activeOverlay;
     var activeOverlayClass;
     var clickedBtn;
     var cuesLoaded = false;
     var cues;
     var cue;
+
+if(Hls.isSupported()) {
+    
     var hls = new Hls({
         debug: false
     });
@@ -93,3 +163,5 @@ if(Hls.isSupported()) {
       
   });
  }
+
+ 
