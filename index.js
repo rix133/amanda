@@ -40,13 +40,34 @@ function updateButton() {
 
 // Create fullscreen video button
 function toggleFullscreen() {
-	if(player.requestFullScreen){
-		player.requestFullScreen();
-	} else if(player.webkitRequestFullScreen){
-		player.webkitRequestFullScreen();
-	} else if(player.mozRequestFullScreen){
-		player.mozRequestFullScreen();
-	}
+	if(document.fullscreenElement){
+    closeFullscreen();
+  }
+  else{
+    openFullscreen();
+  }
+}
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (player.requestFullscreen) {
+    player.requestFullscreen();
+  } else if (player.webkitRequestFullscreen) { /* Safari */
+    player.webkitRequestFullscreen();
+  } else if (player.msRequestFullscreen) { /* IE11 */
+    player.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
 }
 
 
