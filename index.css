@@ -41,26 +41,6 @@ html {
     
   }
   
-  .player__button {
-    background:none;
-    border:0;
-    line-height:1;
-    color:white;
-    text-align: center;
-    outline:0;
-    padding: 0;
-    cursor:pointer;
-    max-width:40px;
-  }
-  
-  .player__button:focus {
-    border-color: #ffc600;
-  }
-  
-  .player__slider {
-    width:10px;
-    height:30px;
-  }
   
   .player__controls {
     display:inline;
@@ -89,20 +69,14 @@ html {
   .current,
   .duration,
   .fullscreen-btn {
-    max-width: 30px;
-    color: #fff;
-    font-size: 10px;
+    width: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 90%;
     margin: auto 0px;
-    padding: 0 7px;
+  
   }
   
-  .fullscreen-btn {
-    color: #000;
-    margin: auto 6px;
-    background-color: #f9f9f9;
-    border-radius: 2px;
-    border: 0;
-  }
   
   video::-webkit-media-controls {
     display:none !important;
@@ -117,7 +91,7 @@ html {
   }
 
 
-.player .watch-button{
+.watch-button{
    display: inline;
    position: absolute;
    bottom: 23%;
@@ -134,12 +108,12 @@ img{
     display: inline;
     width: 100%;
 }
-
+.fullscreen-btn:hover .btn-down,
 .watch-button:hover .btn-down{
     display: inline;
     cursor: pointer;
 }
-
+.fullscreen-btn:hover .btn-up,
 .watch-button:hover .btn-up {
     display: none;
     
