@@ -75,6 +75,14 @@ html {
   .toggle{
     left: 15%;
   }
+
+  .next-chapter{
+    left: 22%;
+  }
+
+  .previous-chapter{
+    left: 8%;
+  }
   
   
   video::-webkit-media-controls {
@@ -108,12 +116,16 @@ img{
     width: 100%;
 }
 
+.next-chapter:hover .btn-down,
+.previous-chapter:hover .btn-down,
 .toggle:hover .btn-down,
 .fullscreen-btn:hover .btn-down,
 .watch-button:hover .btn-down{
     display: inline;
     cursor: pointer;
 }
+.next-chapter:hover .btn-up,
+.previous-chapter:hover .btn-up,
 .toggle:hover .btn-up,
 .fullscreen-btn:hover .btn-up,
 .watch-button:hover .btn-up {

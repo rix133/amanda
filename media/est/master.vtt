@@ -25,6 +25,7 @@ b_intro
 {
     "chapterID": "b",
     "type": "intro",  
-    "nextChapterID": "b_loop"
+    "nextChapterID": "b_loop",
+    "previousChapterID": "a_loop"
 }
 
