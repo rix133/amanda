@@ -55,26 +55,25 @@ html {
     dom and shows the custom player in full screen mode instead */
   }
   
-  .player:hover .player__controls {
-    transform: translateY(0);
-  }
-  
+    
   
   .player__controls > * {
     flex:1;
+    width: 9%;
+    position: absolute;
+    margin: auto 0px;
+    bottom: 5%;
   }
   
 
   
-  .current,
-  .duration,
-  .fullscreen-btn {
-    width: 10%;
-    position: absolute;
-    bottom: 5%;
+  .fullscreen-btn { 
     left: 90%;
-    margin: auto 0px;
   
+  }
+
+  .toggle{
+    left: 15%;
   }
   
   
@@ -108,11 +107,14 @@ img{
     display: inline;
     width: 100%;
 }
+
+.toggle:hover .btn-down,
 .fullscreen-btn:hover .btn-down,
 .watch-button:hover .btn-down{
     display: inline;
     cursor: pointer;
 }
+.toggle:hover .btn-up,
 .fullscreen-btn:hover .btn-up,
 .watch-button:hover .btn-up {
     display: none;

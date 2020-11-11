@@ -7,9 +7,11 @@ const player       =  document.querySelector('.player');
 
 const video        =  player.querySelector('.viewer');
 
-const toggle       =  player.querySelector('.toggle');
+const controls      =  player.querySelector('.player__controls');
 
-const fullscreen   =  player.querySelector('.fullscreen-btn');
+const toggle       =  controls.querySelector('.toggle');
+
+const fullscreen   =  controls.querySelector('.fullscreen-btn');
 
 
 
@@ -34,8 +36,9 @@ function detectKeypress(e) {
 
 // Update button on play/pause
 function updateButton() {
-  const icon = this.paused ? '►' : '❚ ❚';
-  toggle.textContent = icon;
+  const icon = this.paused ? 'assets/buttons/pause/2.png' : 'assets/buttons/pause/1.png';
+  let defaultImg = toggle.querySelector(".btn-up");
+  defaultImg.src = icon;
 }
 
 // Create fullscreen video button
@@ -108,11 +111,21 @@ function goToChapter(cueID){
 function parseRawCues(cues){
     var cueArr = []; 
     for (let index = 0; index < cues.length; index++) {
-        const cue = cues[index];
+        let cue = cues[index];
+        cue.data = JSON.parse(cue.text);
         cueArr[cue.id] = cue;
     }
     
     return(cueArr);
+}
+
+function updateControlDisplay(data){
+  if(data.hideControls){
+    controls.className = "player__controls hidden";
+  }
+  else{
+    controls.className = "player__controls";
+  }
 }
 
 
@@ -142,20 +155,20 @@ if(Hls.isSupported()) {
       metaTrack.oncuechange = function(e) {
           if(!cuesLoaded){
             cues = parseRawCues(this.cues);
-            console.log(cues);
+            //console.log(cues);
             cuesLoaded = true;
           }
-          
         
           cue = this.activeCues[0];
           if(cue){
-              cue.data = JSON.parse(cue.text);
+              cue.data = cues[cue.id].data;
               cue.forcedExit = false;
               activeOverlayClass = cue.data.displayClass;
               if(activeOverlayClass){
                   activeOverlay = document.getElementById(activeOverlayClass);
                   activeOverlay.className = activeOverlayClass;
               }
+              updateControlDisplay(cue.data);
               
               cue.onexit = function(e){
                   if(this.data.type == "loop"){

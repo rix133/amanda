@@ -5,7 +5,8 @@ a_intro
 {
     "chapterID": "a",
     "type": "intro",
-    "nextChapterID": "a_loop"
+    "nextChapterID": "a_loop",
+    "hideControls": false
 }
 
 a_loop
@@ -15,7 +16,8 @@ a_loop
     "type": "loop", 
     "displayClass": "watch-button", 
     "nextChapterID": "b_intro",
-    "previousChapterID": "a_intro"
+    "previousChapterID": "a_intro",
+    "hideControls": true
 }
 
 b_intro
