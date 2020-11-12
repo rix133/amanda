@@ -115,9 +115,6 @@ html {
 
 .b-buttons{
    display: inline;
-   position: absolute;
-   bottom: 23%;
-   left: 75%;
    z-index: 50;
    animation-name: fadein;
    animation-duration: 0.5s;
@@ -126,18 +123,34 @@ html {
 }
 
 .btn-ema{
-  
+  position: absolute;
+  bottom: 50%;
+  left: 65%;
+}
+
+.btn-edasi{
+  position: absolute;
+  bottom: 23%;
+  left: 75%;
+}
+
+.luup{
+  width: 5%;
+  margin: 0 auto;
+}
+.infotext{
+  transition: transform 150ms ease-out;
+  transform-origin: center;
 }
 
 .luup:hover .infotext{
-  position:absolute;
-  display: inline;
-  left: 35%;
-  top: 60%;
+  cursor: pointer;
+  transform: scale(4);
+  
 }
 
 .luup .infotext{
-  display: none;
+  transform: scale(0);
 }
 
 

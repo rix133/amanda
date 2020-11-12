@@ -128,6 +128,7 @@ function goToChapter(cueID){
     cue.forcedExit = true;
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
+
     logTime();
 }
 
@@ -184,6 +185,7 @@ if(Hls.isSupported()) {
         
           cue = this.activeCues[0];
           if(cue){
+            //console.log("enter "+cue.id);
               cue.data = cues[cue.id].data;
               cue.forcedExit = false;
               activeOverlayClass = cue.data.displayClass;
@@ -194,6 +196,7 @@ if(Hls.isSupported()) {
               updateControlDisplay(cue.data);
               
               cue.onexit = function(e){
+                //console.log("exit "+this.id);
                   if(this.data.type == "loop"){
                     if(!this.forcedExit){
                         video.currentTime = this.startTime;
@@ -205,7 +208,9 @@ if(Hls.isSupported()) {
                     if(activeOverlay){
                       activeOverlay.className ="hidden";
                   }
-                  goToChapter(this.data.nextChapterID);
+                  if(!this.forcedExit){
+                    goToChapter(this.data.nextChapterID);
+                  }
                     
                   }
 
