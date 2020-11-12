@@ -113,6 +113,33 @@ html {
    animation-fill-mode: both;
 }
 
+.b-buttons{
+   display: inline;
+   position: absolute;
+   bottom: 23%;
+   left: 75%;
+   z-index: 50;
+   animation-name: fadein;
+   animation-duration: 0.5s;
+   animation-fill-mode: both;
+
+}
+
+.btn-ema{
+  
+}
+
+.luup:hover .infotext{
+  position:absolute;
+  display: inline;
+  left: 35%;
+  top: 60%;
+}
+
+.luup .infotext{
+  display: none;
+}
+
 
 img{
     display: inline;

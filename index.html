@@ -7,19 +7,32 @@
   </head>
 
   <body>
-    <!-- forward buttons -->
     <div class="player">
+      <video id="video" class="player__video viewer" disablePictureInPicture>
+        <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
+
+      </video>
+    <!-- forward buttons -->
+    
     <div id="watch-button" class="hidden" >
       <img class="btn-up" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
       <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
     </div>
-    <video id="video" class="player__video viewer">
-            <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
-
-    </video>
+    
 
     <!-- question buttons -->
 
+    <div id="b-buttons" class="hidden" >
+      <div class="btn-ema luup">
+        <img src="assets/buttons/luup/punane.png">
+        <img class="infotext" src="assets/buttons/luup/sprites/amandaEma/1.png">
+      </div>
+      
+      
+      <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
+      <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+    
+    </div>
 
      <!-- video controls -->
     <div class="player__controls hidden">
@@ -31,7 +44,7 @@
 
       <div class="exit" >
         <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
-        <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!" onclick="goToChapter('a_intro')">
+        <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!" onclick="nextFrame()">
       </div>
 
       <div class="next-chapter" >

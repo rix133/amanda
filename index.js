@@ -43,11 +43,12 @@ function updateButton() {
 
 // Create fullscreen video button
 function toggleFullscreen() {
+  rewind(1);
 	if(document.fullscreenElement){
-    closeFullscreen();
+    //closeFullscreen();
   }
   else{
-    openFullscreen();
+    //openFullscreen();
   }
 }
 
@@ -73,6 +74,27 @@ function closeFullscreen() {
   }
 }
 
+function nextFrame(){
+  video.seekToNextFrame();
+  logTime()
+
+}
+function rewind(t){
+  video.currentTime = video.currentTime - t;
+  logTime()
+  
+}
+
+function logTime(){
+  let sec = video.currentTime % 60;
+  let min = Math.round(video.currentTime / 60, 0);
+  if(cue){
+    console.log(cue.id+ ": 0"+min+":"+sec+" ("+video.currentTime+")");
+  }
+  else{
+    console.log("nocue : 0"+min+":"+sec);
+  }
+}
 
 
 
@@ -106,6 +128,7 @@ function goToChapter(cueID){
     cue.forcedExit = true;
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
+    logTime();
 }
 
 function parseRawCues(cues){
@@ -146,7 +169,7 @@ if(Hls.isSupported()) {
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
       video.muted = true;
-      video.currentTime = 0;
+      video.currentTime = 132;
       var metaTrack  = video.textTracks[0];
       
       
@@ -155,7 +178,7 @@ if(Hls.isSupported()) {
       metaTrack.oncuechange = function(e) {
           if(!cuesLoaded){
             cues = parseRawCues(this.cues);
-            console.log(cues);
+            //console.log(cues);
             cuesLoaded = true;
           }
         
@@ -178,6 +201,14 @@ if(Hls.isSupported()) {
                     else{activeOverlay.className ="hidden";}
                     
                   }
+                  if(this.data.type == "forceNext"){
+                    if(activeOverlay){
+                      activeOverlay.className ="hidden";
+                  }
+                  goToChapter(this.data.nextChapterID);
+                    
+                  }
+
                   if(this.data.type == "intro"){
                     if(activeOverlay){
                         activeOverlay.className ="hidden";
@@ -186,14 +217,14 @@ if(Hls.isSupported()) {
                   if(this.data.type == "question"){
                     if(activeOverlay){
                         activeOverlay.className ="hidden";
-                        goToChapter(this.previousChapterID);
+                        goToChapter(this.data.previousChapterID);
                     }
                   }
                   
               }
           }
       }
-      video.play();
+      //video.play();
       
   });
  }
