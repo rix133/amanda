@@ -155,7 +155,7 @@ if(Hls.isSupported()) {
       metaTrack.oncuechange = function(e) {
           if(!cuesLoaded){
             cues = parseRawCues(this.cues);
-            //console.log(cues);
+            console.log(cues);
             cuesLoaded = true;
           }
         

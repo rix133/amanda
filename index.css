@@ -75,6 +75,9 @@ html {
   .toggle{
     left: 15%;
   }
+  .exit{
+    left: 1%;
+  }
 
   .next-chapter{
     left: 22%;
@@ -115,7 +118,7 @@ img{
     display: inline;
     width: 100%;
 }
-
+.exit:hover .btn-down,
 .next-chapter:hover .btn-down,
 .previous-chapter:hover .btn-down,
 .toggle:hover .btn-down,
@@ -124,6 +127,7 @@ img{
     display: inline;
     cursor: pointer;
 }
+.exit:hover .btn-up,
 .next-chapter:hover .btn-up,
 .previous-chapter:hover .btn-up,
 .toggle:hover .btn-up,

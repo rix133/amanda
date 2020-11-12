@@ -1,16 +1,16 @@
 WEBVTT FILE
 
 a_intro
-00:00:00.000 --> 00:00:07.600
+00:00:00.000 --> 00:00:05.384
 {
     "chapterID": "a",
     "type": "intro",
-    "nextChapterID": "a_loop",
+    "nextChapterID": "b_loop",
     "hideControls": false
 }
 
 a_loop
-00:00:07.700 --> 00:00:23.000
+00:00:05.384 --> 00:00:54.057
 {
     "chapterID": "a",
     "type": "loop", 
@@ -21,7 +21,7 @@ a_loop
 }
 
 b_intro
-00:00:23.600 --> 00:01:23.000
+00:00:54.058 --> 00:02:11.363
 {
     "chapterID": "b",
     "type": "intro",  
@@ -29,3 +29,289 @@ b_intro
     "previousChapterID": "a_loop"
 }
 
+
+b_loop
+00:02:11.364 --> 00:02:22.192
+{
+    "chapterID": "b",
+    "type": "intro",  
+    "previousChapterID": "b_intro",
+    "nextChapterID": "c_intro"
+}
+
+
+b3i_kaalumine
+00:02:22.192 --> 00:02:35.441
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+b4i_haigla_ode
+00:02:35.441 --> 00:02:46.384
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+
+b5i_ema
+00:02:46.384 --> 00:02:57.211
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+b6i_m2ngunurk
+00:02:57.211 --> 00:03:12.211
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+c_intro
+00:03:12.500 --> 00:04:27.441
+{
+    "chapterID": "c",
+    "type": "intro",
+    "previousChapterID": "b_loop",
+    "nextChapterID": "c_loop"
+}
+
+c_loop
+00:04:27.700 --> 00:04:49.134
+{
+    "chapterID": "c",
+    "type": "loop",  
+    "previousChapterID": "c_intro",
+    "nextChapterID": "d_intro_loop"
+}
+
+
+c3i_kasvalus
+00:04:49.134 --> 00:04:59.038
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+
+c4i_millalkoju
+00:04:59.038 --> 00:04:59.038
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+
+c5i_kasema
+00:04:59.038 --> 00:05:16.230
+{
+    "chapterID": "b",
+    "type": "question",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+
+d_intro_loop
+00:05:16.230 --> 00:08:15.172
+{
+    "chapterID": "d",
+    "type": "intro",
+    "previousChapterID": "c_loop",
+    "nextChapterID": "e__intro_loop"
+}
+
+e_intro_loop
+00:08:15.172 --> 00:09:14.441
+{
+    "chapterID": "e",
+    "type": "intro",  
+    "previousChapterID": "d__intro_loop",
+    "nextChapterID": "g_intro"
+}
+
+g_intro
+00:09:14.441 --> 00:09:58.153
+{
+    "chapterID": "g",
+    "type": "intro",
+    "previousChapterID": "e_intro_loop",
+    "nextChapterID": "g_loop"
+}
+
+g_loop
+00:09:58.153 --> 00:10:23.460
+{
+    "chapterID": "g",
+    "type": "loop",  
+    "previousChapterID": "g_intro",
+    "nextChapterID": "i_intro"
+}
+
+
+g3i_telekas
+00:10:23.460 --> 00:10:38.288
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g4i_opiode
+00:10:38.288 --> 00:10:56.153
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g5i_opiode
+00:10:56.153 --> 00:11:17.076
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g6i_valgustid
+00:11:17.076 --> 00:11:29.038
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g7i_narkoosiaparatuur
+00:11:29.038 --> 00:11:38.441
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g8i_narkoosi_ode
+00:11:38.441 --> 00:11:54.249
+{
+    "chapterID": "g",
+    "type": "question",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+i_intro
+00:11:54.249 --> 00:13:24.403
+{
+    "chapterID": "i",
+    "type": "intro",
+    "previousChapterID": "g_loop",
+    "nextChapterID": "i_loop"
+}
+
+i_loop
+00:13:24.403 --> 00:13:35.249
+{
+    "chapterID": "i",
+    "type": "loop",  
+    "previousChapterID": "i_intro",
+    "nextChapterID": "j_intro_loop"
+}
+
+i3i_monitorid
+00:13:35.249 --> 00:13:43.076
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i4i_ema
+00:13:43.076 --> 00:13:53.422
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i5i_vererohk
+00:13:43.076 --> 00:14:01.288
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i6i_ekg
+00:14:01.288 --> 00:14:11.460
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i7i_pulssoksymeeter
+00:14:11.460 --> 00:14:21.038
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i8i_kanyyl
+00:14:21.038 --> 00:14:31.460
+{
+    "chapterID": "i",
+    "type": "question",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+j_intro_loop
+00:14:31.460 --> 00:15:42.038
+{
+    "chapterID": "j",
+    "type": "intro",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "l_intro_loop"
+}
+
+l_intro_loop
+00:15:42.038 --> 00:16:37.460
+{
+    "chapterID": "l",
+    "type": "intro",  
+    "previousChapterID": "j_intro_loop",
+    "nextChapterID": "m_end"
+}
+
+m_end
+00:16:37.460 --> 00:17:35.211
+{
+    "chapterID": "m",
+    "type": "end",  
+    "previousChapterID": "l_intro_loop",
+    "nextChapterID": "a_intro"
+}
