@@ -113,6 +113,7 @@ html {
    animation-fill-mode: both;
 }
 
+.c-buttons,
 .b-buttons{
    display: inline;
    z-index: 50;
@@ -120,6 +121,18 @@ html {
    animation-duration: 0.5s;
    animation-fill-mode: both;
 
+}
+
+.btn-kasema{
+  position: absolute;
+  bottom: 66%;
+  left: 32%;
+}
+
+.btn-millalkoju{
+  position: absolute;
+  bottom: 84%;
+  left: 62%;
 }
 
 .btn-ema{
@@ -132,6 +145,18 @@ html {
   position: absolute;
   bottom: 50%;
   left: 37%;
+}
+.btn-kasvalus,
+.btn-kaalumine{
+  position: absolute;
+  bottom: 27%;
+  left: 17%;
+}
+
+.btn-m2ngunurk{
+  position: absolute;
+  bottom: 52%;
+  left: 83%;
 }
 
 .btn-edasi{
@@ -153,7 +178,8 @@ html {
 .t-top{
   bottom: 110%;
 }
-
+.infotext-bigger,
+.infotext-biggest,
 .infotext{
   position: absolute;
   left: 10%;
@@ -167,6 +193,19 @@ html {
   
 }
 
+.luup:hover .infotext-bigger{
+  cursor: pointer;
+  transform: scale(5);
+  
+}
+
+.luup:hover .infotext-biggest{
+  cursor: pointer;
+  transform: scale(6);
+  
+}
+.luup .infotext-bigger,
+.luup .infotext-biggest,
 .luup .infotext{
   transform: scale(0);
 }

@@ -168,7 +168,7 @@ if(Hls.isSupported()) {
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
       video.muted = true;
-      video.currentTime = 132;
+      video.currentTime = 267.7;
       var metaTrack  = video.textTracks[0];
       
       

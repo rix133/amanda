@@ -93,7 +93,8 @@ c_loop
     "chapterID": "c",
     "type": "forceNext",  
     "previousChapterID": "c_intro",
-    "nextChapterID": "d_intro_loop"
+    "nextChapterID": "d_intro_loop",
+    "displayClass": "c-buttons"
 }
 
 
