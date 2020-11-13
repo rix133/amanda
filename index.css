@@ -125,7 +125,13 @@ html {
 .btn-ema{
   position: absolute;
   bottom: 50%;
-  left: 65%;
+  left: 70%;
+}
+
+.btn-haigla6de{
+  position: absolute;
+  bottom: 50%;
+  left: 37%;
 }
 
 .btn-edasi{
@@ -138,7 +144,19 @@ html {
   width: 5%;
   margin: 0 auto;
 }
+
+.t-bottom{
+  bottom: -80%;
+}
+
+
+.t-top{
+  bottom: 110%;
+}
+
 .infotext{
+  position: absolute;
+  left: 10%;
   transition: transform 150ms ease-out;
   transform-origin: center;
 }
@@ -177,7 +195,13 @@ img{
     
 }
 
-
  .player .hidden {
     display: none;
+ }
+
+ .video-overlay{
+   opacity: 50%;
+   position: absolute;
+   width: 100%;
+   z-index: 20;
  }

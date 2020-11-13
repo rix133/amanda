@@ -8,6 +8,9 @@
 
   <body>
     <div class="player">
+      <!-- overlay image for button placement-->
+     <div class="video-overlay"><img src="amandaFlash/a.png"></div>
+
       <video id="video" class="player__video viewer" disablePictureInPicture>
         <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
 
@@ -24,8 +27,12 @@
 
     <div id="b-buttons" class="hidden" >
       <div class="btn-ema luup" onclick="goToChapter('b5i_ema')">
+        <img src="assets/buttons/luup/lilla.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/amandaEma/1.png">
+      </div>
+      <div class="btn-haigla6de luup" onclick="goToChapter('b4i_haigla_ode')">
         <img src="assets/buttons/luup/punane.png">
-        <img class="infotext" src="assets/buttons/luup/sprites/amandaEma/1.png">
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/haigla6de/1.png">
       </div>
       
       <div class="next-chapter btn-edasi">

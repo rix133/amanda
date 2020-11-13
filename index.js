@@ -14,8 +14,6 @@ const toggle       =  controls.querySelector('.toggle');
 const fullscreen   =  controls.querySelector('.fullscreen-btn');
 
 
-
-
 /* Build out functions */ 
 
 
