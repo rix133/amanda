@@ -201,14 +201,15 @@ if(Hls.isSupported()) {
               
               cue.onexit = function(e){
                 //console.log("exit "+this.id);
-                  if(this.data.type == "loop"){
+                let endAction = this.data.endAction;
+                  if(endAction == "goToStart"){
                     if(!this.forcedExit){
                         video.currentTime = this.startTime;
                     }
                     else{activeOverlay.className ="hidden";}
                     
                   }
-                  if(this.data.type == "forceNext"){
+                  if(endAction == "goToNext"){
                     if(activeOverlay){
                       activeOverlay.className ="hidden";
                   }
@@ -218,16 +219,20 @@ if(Hls.isSupported()) {
                     
                   }
 
-                  if(this.data.type == "intro"){
+                  if(endAction == "continue"){
                     if(activeOverlay){
                         activeOverlay.className ="hidden";
                     }
                   }
-                  if(this.data.type == "question"){
+                  if(endAction == "goToPrevious"){
                     if(activeOverlay){
                         activeOverlay.className ="hidden";
                         goToChapter(this.data.previousChapterID);
                     }
+                  }
+
+                  if(endAction == "stop"){                
+                      video.pause()
                   }
                   
               }

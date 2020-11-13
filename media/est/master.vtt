@@ -4,8 +4,8 @@ a_intro
 00:00:00.000 --> 00:00:05.384
 {
     "chapterID": "a",
-    "type": "intro",
-    "nextChapterID": "b_loop",
+    "endAction": "continue",
+    "nextChapterID": "b_intro",
     "hideControls": true
 }
 
@@ -13,7 +13,7 @@ a_loop
 00:00:05.385 --> 00:00:54.061
 {
     "chapterID": "a",
-    "type": "loop", 
+    "endAction": "goToStart", 
     "displayClass": "watch-button", 
     "nextChapterID": "b_intro",
     "previousChapterID": "a_intro",
@@ -24,7 +24,7 @@ b_intro
 00:00:54.101 --> 00:02:11.363
 {
     "chapterID": "b",
-    "type": "intro",  
+    "endAction": "continue",  
     "nextChapterID": "b_loop",
     "previousChapterID": "a_loop"
 }
@@ -34,7 +34,7 @@ b_loop
 00:02:11.364 --> 00:02:22.341
 {
     "chapterID": "b",
-    "type": "forceNext",  
+    "endAction": "goToNext",  
     "previousChapterID": "b_intro",
     "nextChapterID": "c_intro",
     "displayClass": "b-buttons"
@@ -45,7 +45,7 @@ b3i_kaalumine
 00:02:22.382 --> 00:02:35.861
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "b_loop",
     "nextChapterID": "b_loop"
 }
@@ -54,7 +54,7 @@ b4i_haigla_ode
 00:02:35.912 --> 00:02:46.741
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "b_loop",
     "nextChapterID": "b_loop"
 }
@@ -64,7 +64,7 @@ b5i_ema
 00:02:46.832 --> 00:02:57.381
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "b_loop",
     "nextChapterID": "b_loop"
 }
@@ -73,7 +73,7 @@ b6i_m2ngunurk
 00:02:59.782 --> 00:03:12.421
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "b_loop",
     "nextChapterID": "b_loop"
 }
@@ -82,7 +82,7 @@ c_intro
 00:03:12.462 --> 00:04:27.441
 {
     "chapterID": "c",
-    "type": "intro",
+    "endAction": "continue",
     "previousChapterID": "b_loop",
     "nextChapterID": "c_loop"
 }
@@ -91,7 +91,7 @@ c_loop
 00:04:27.700 --> 00:04:49.134
 {
     "chapterID": "c",
-    "type": "forceNext",  
+    "endAction": "goToNext",  
     "previousChapterID": "c_intro",
     "nextChapterID": "d_intro_loop",
     "displayClass": "c-buttons"
@@ -99,30 +99,30 @@ c_loop
 
 
 c3i_kasvalus
-00:04:49.134 --> 00:04:59.038
+00:04:49.135 --> 00:04:59.038
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "c_loop",
     "nextChapterID": "c_loop"
 }
 
 
 c4i_millalkoju
-00:04:59.038 --> 00:04:59.038
+00:04:59.039 --> 00:04:59.040
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "c_loop",
     "nextChapterID": "c_loop"
 }
 
 
 c5i_kasema
-00:04:59.038 --> 00:05:16.450
+00:04:59.041 --> 00:05:16.450
 {
     "chapterID": "b",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "c_loop",
     "nextChapterID": "c_loop"
 }
@@ -132,7 +132,7 @@ d_intro_loop
 00:05:16.502 --> 00:07:34.501
 {
     "chapterID": "d",
-    "type": "intro",
+    "endAction": "continue",
     "previousChapterID": "c_loop",
     "nextChapterID": "e_intro_loop"
 }
@@ -141,7 +141,7 @@ d_loop
 00:07:34.502 --> 00:08:15.206
 {
     "chapterID": "ilmub  nupp operatsioonile",
-    "type": "forceNext",
+    "endAction": "continue",
     "previousChapterID": "c_loop",
     "nextChapterID": "e_intro_loop"
 }
@@ -150,7 +150,7 @@ e_intro_loop
 00:08:15.402 --> 00:09:14.482
 {
     "chapterID": "e",
-    "type": "intro",  
+    "endAction": "continue",  
     "previousChapterID": "d_intro_loop",
     "nextChapterID": "g_intro"
 }
@@ -159,7 +159,7 @@ g_intro
 00:09:14.901 --> 00:09:58.200
 {
     "chapterID": "g",
-    "type": "intro",
+    "endAction": "continue",
     "previousChapterID": "e_intro_loop",
     "nextChapterID": "g_loop"
 }
@@ -168,7 +168,7 @@ g_loop
 00:09:58.201 --> 00:10:23.460
 {
     "chapterID": "g",
-    "type": "forceNext",  
+    "endAction": "goToNext",  
     "previousChapterID": "g_intro",
     "nextChapterID": "i_intro",
     "displayClass": "g-buttons"
@@ -179,7 +179,7 @@ g3i_telekas
 00:10:23.461 --> 00:10:38.288
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -188,7 +188,7 @@ g4i_opiode
 00:10:38.289 --> 00:10:56.153
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -197,7 +197,7 @@ g5i_opilaud
 00:10:56.154 --> 00:11:17.076
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -206,7 +206,7 @@ g6i_valgustid
 00:11:17.077 --> 00:11:29.038
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -215,7 +215,7 @@ g7i_narkoosiaparatuur
 00:11:29.039 --> 00:11:38.441
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -224,7 +224,7 @@ g8i_narkoosi_ode
 00:11:38.442 --> 00:11:54.249
 {
     "chapterID": "g",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "g_loop",
     "nextChapterID": "g_loop"
 }
@@ -233,7 +233,7 @@ i_intro
 00:11:54.501 --> 00:13:24.403
 {
     "chapterID": "i",
-    "type": "intro",
+    "endAction": "continue",
     "previousChapterID": "g_loop",
     "nextChapterID": "i_loop"
 }
@@ -242,7 +242,7 @@ i_loop
 00:13:24.404 --> 00:13:35.249
 {
     "chapterID": "i",
-    "type": "forceNext",  
+    "endAction": "goToNext",  
     "previousChapterID": "i_intro",
     "nextChapterID": "j_intro_loop",
     "displayClass": "i-buttons"
@@ -252,7 +252,7 @@ i3i_monitorid
 00:13:35.250 --> 00:13:43.076
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -261,7 +261,7 @@ i4i_ema
 00:13:43.077 --> 00:13:53.422
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -270,7 +270,7 @@ i5i_vererohk
 00:13:53.423 --> 00:14:01.288
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -279,7 +279,7 @@ i6i_ekg
 00:14:01.289 --> 00:14:11.460
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -288,7 +288,7 @@ i7i_pulssoksymeeter
 00:14:11.461 --> 00:14:21.038
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -297,7 +297,7 @@ i8i_kanyyl
 00:14:21.039 --> 00:14:31.901
 {
     "chapterID": "i",
-    "type": "question",  
+    "endAction": "goToPrevious",  
     "previousChapterID": "i_loop",
     "nextChapterID": "i_loop"
 }
@@ -306,7 +306,7 @@ j_intro_loop
 00:14:31.941 --> 00:15:42.038
 {
     "chapterID": "j",
-    "type": "intro",  
+    "endAction": "continue",  
     "previousChapterID": "i_loop",
     "nextChapterID": "l_intro_loop"
 }
@@ -315,7 +315,7 @@ l_intro_loop
 00:15:42.040 --> 00:16:37.460
 {
     "chapterID": "l",
-    "type": "intro",  
+    "endAction": "continue",  
     "previousChapterID": "j_intro_loop",
     "nextChapterID": "m_end"
 }
@@ -324,7 +324,7 @@ m_end
 00:16:37.461 --> 00:17:35.211
 {
     "chapterID": "m",
-    "type": "end",  
+    "endAction": "stop",  
     "previousChapterID": "l_intro_loop",
     "nextChapterID": "a_intro"
 }
