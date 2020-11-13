@@ -6,7 +6,7 @@ a_intro
     "chapterID": "a",
     "type": "intro",
     "nextChapterID": "b_loop",
-    "hideControls": false
+    "hideControls": true
 }
 
 a_loop

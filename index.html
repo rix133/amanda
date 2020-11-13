@@ -11,6 +11,7 @@
       <!-- overlay image for button placement
      <div class="video-overlay"><img src="amandaFlash/d.png"></div>
         -->
+     
       <video id="video" class="player__video viewer" disablePictureInPicture>
         <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
 
@@ -18,10 +19,18 @@
     <!-- forward buttons -->
     
     <div id="watch-button" class="hidden" >
-      <img class="btn-up btn" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
-      <img class="btn-down btn hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+      <div class="btn-edasi btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+      </div> 
     </div>
-    
+
+    <div id="start-video">
+      <div class="btn-edasi btn" onclick="firstPlay()">
+        <img class="btn-up" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+      </div> 
+    </div>
 
     <!-- question buttons B -->
     
@@ -43,9 +52,9 @@
         <img class="infotext t-bottom" src="assets/buttons/luup/sprites/m2nguasjad/1.png">
       </div>
       
-      <div class="next-chapter btn-edasi btn">
+      <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
         <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
     </div>
 
@@ -64,9 +73,9 @@
         <img class="infotext-bigger t-bottom" src="assets/buttons/luup/sprites/kauaHaiglas/1.png">
       </div>
       
-      <div class="next-chapter btn-edasi btn">
+      <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
         <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
     </div>
 
@@ -102,9 +111,9 @@
 
       </div>
       
-      <div class="next-chapter btn-edasi btn">
+      <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
         <img class="btn-up" src="assets/buttons/kutsumeAmanda/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
     </div>
 
@@ -138,9 +147,9 @@
         <img class="infotext t-bottom-left" src="assets/buttons/luup/sprites/kanyyl/1.png">
       </div>
       
-      <div class="next-chapter btn-edasi btn">
+      <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
         <img class="btn-up" src="assets/buttons/narkoosiksValmis/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
     </div>
 
@@ -152,7 +161,7 @@
     
       </div>
 
-      <div class="exit btn" onclick="nextFrame()">
+      <div class="exit btn" onclick="goToChapter('a_intro')">
         <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
         <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!">
       </div>

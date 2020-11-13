@@ -16,6 +16,12 @@ const fullscreen   =  controls.querySelector('.fullscreen-btn');
 
 /* Build out functions */ 
 
+function firstPlay(){
+  video.play();
+  let startDiv = document.getElementById("start-video");
+  startDiv.className = "hidden";
+
+}
 
 // toggle play/pause
 function togglePlay() {
@@ -41,12 +47,12 @@ function updateButton() {
 
 // Create fullscreen video button
 function toggleFullscreen() {
-  rewind(1);
+  //rewind(1);
 	if(document.fullscreenElement){
-    //closeFullscreen();
+    closeFullscreen();
   }
   else{
-    //openFullscreen();
+    openFullscreen();
   }
 }
 
@@ -167,8 +173,8 @@ if(Hls.isSupported()) {
     hls.attachMedia(video);
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
-      video.muted = true;
-      video.currentTime = 132;
+      //video.muted = true;
+      video.currentTime = 0;
       var metaTrack  = video.textTracks[0];
       
       
