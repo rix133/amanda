@@ -129,7 +129,7 @@ c5i_kasema
 
 
 d_intro_loop
-00:05:16.502 --> 00:08:15.172
+00:05:16.502 --> 00:07:34.501
 {
     "chapterID": "d",
     "type": "intro",
@@ -137,8 +137,17 @@ d_intro_loop
     "nextChapterID": "e_intro_loop"
 }
 
+d_loop
+00:07:34.502 --> 00:08:15.206
+{
+    "chapterID": "ilmub  nupp operatsioonile",
+    "type": "forceNext",
+    "previousChapterID": "c_loop",
+    "nextChapterID": "e_intro_loop"
+}
+
 e_intro_loop
-00:08:15.172 --> 00:09:14.482
+00:08:15.402 --> 00:09:14.482
 {
     "chapterID": "e",
     "type": "intro",  
@@ -147,7 +156,7 @@ e_intro_loop
 }
 
 g_intro
-00:09:14.901 --> 00:09:58.153
+00:09:14.901 --> 00:09:58.200
 {
     "chapterID": "g",
     "type": "intro",
@@ -156,17 +165,18 @@ g_intro
 }
 
 g_loop
-00:09:58.153 --> 00:10:23.460
+00:09:58.201 --> 00:10:23.460
 {
     "chapterID": "g",
     "type": "forceNext",  
     "previousChapterID": "g_intro",
-    "nextChapterID": "i_intro"
+    "nextChapterID": "i_intro",
+    "displayClass": "g-buttons"
 }
 
 
 g3i_telekas
-00:10:23.460 --> 00:10:38.288
+00:10:23.461 --> 00:10:38.288
 {
     "chapterID": "g",
     "type": "question",  
@@ -175,7 +185,7 @@ g3i_telekas
 }
 
 g4i_opiode
-00:10:38.288 --> 00:10:56.153
+00:10:38.289 --> 00:10:56.153
 {
     "chapterID": "g",
     "type": "question",  
@@ -183,8 +193,8 @@ g4i_opiode
     "nextChapterID": "g_loop"
 }
 
-g5i_opiode
-00:10:56.153 --> 00:11:17.076
+g5i_opilaud
+00:10:56.154 --> 00:11:17.076
 {
     "chapterID": "g",
     "type": "question",  
@@ -193,7 +203,7 @@ g5i_opiode
 }
 
 g6i_valgustid
-00:11:17.076 --> 00:11:29.038
+00:11:17.077 --> 00:11:29.038
 {
     "chapterID": "g",
     "type": "question",  
@@ -202,7 +212,7 @@ g6i_valgustid
 }
 
 g7i_narkoosiaparatuur
-00:11:29.038 --> 00:11:38.441
+00:11:29.039 --> 00:11:38.441
 {
     "chapterID": "g",
     "type": "question",  
@@ -211,7 +221,7 @@ g7i_narkoosiaparatuur
 }
 
 g8i_narkoosi_ode
-00:11:38.441 --> 00:11:54.249
+00:11:38.442 --> 00:11:54.249
 {
     "chapterID": "g",
     "type": "question",  
@@ -229,16 +239,17 @@ i_intro
 }
 
 i_loop
-00:13:24.403 --> 00:13:35.249
+00:13:24.404 --> 00:13:35.249
 {
     "chapterID": "i",
     "type": "forceNext",  
     "previousChapterID": "i_intro",
-    "nextChapterID": "j_intro_loop"
+    "nextChapterID": "j_intro_loop",
+    "displayClass": "i-buttons"
 }
 
 i3i_monitorid
-00:13:35.249 --> 00:13:43.076
+00:13:35.250 --> 00:13:43.076
 {
     "chapterID": "i",
     "type": "question",  
@@ -247,7 +258,7 @@ i3i_monitorid
 }
 
 i4i_ema
-00:13:43.076 --> 00:13:53.422
+00:13:43.077 --> 00:13:53.422
 {
     "chapterID": "i",
     "type": "question",  
@@ -256,7 +267,7 @@ i4i_ema
 }
 
 i5i_vererohk
-00:13:43.076 --> 00:14:01.288
+00:13:53.423 --> 00:14:01.288
 {
     "chapterID": "i",
     "type": "question",  
@@ -265,7 +276,7 @@ i5i_vererohk
 }
 
 i6i_ekg
-00:14:01.288 --> 00:14:11.460
+00:14:01.289 --> 00:14:11.460
 {
     "chapterID": "i",
     "type": "question",  
@@ -274,7 +285,7 @@ i6i_ekg
 }
 
 i7i_pulssoksymeeter
-00:14:11.460 --> 00:14:21.038
+00:14:11.461 --> 00:14:21.038
 {
     "chapterID": "i",
     "type": "question",  
@@ -283,7 +294,7 @@ i7i_pulssoksymeeter
 }
 
 i8i_kanyyl
-00:14:21.038 --> 00:14:31.901
+00:14:21.039 --> 00:14:31.901
 {
     "chapterID": "i",
     "type": "question",  
@@ -310,7 +321,7 @@ l_intro_loop
 }
 
 m_end
-00:16:37.460 --> 00:17:35.211
+00:16:37.461 --> 00:17:35.211
 {
     "chapterID": "m",
     "type": "end",  

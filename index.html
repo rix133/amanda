@@ -8,9 +8,9 @@
 
   <body>
     <div class="player">
-      <!-- overlay image for button placement-->
-     <div class="video-overlay"><img src="amandaFlash/b.png"></div>
-
+      <!-- overlay image for button placement
+     <div class="video-overlay"><img src="amandaFlash/d.png"></div>
+        -->
       <video id="video" class="player__video viewer" disablePictureInPicture>
         <track kind="metadata" src="media/est/master.vtt" srclang="en" label="metainfo">
 
@@ -18,32 +18,32 @@
     <!-- forward buttons -->
     
     <div id="watch-button" class="hidden" >
-      <img class="btn-up" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
-      <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+      <img class="btn-up btn" src="assets/buttons/vaataFilmi/1.png" alt="Vaata filmi!">
+      <img class="btn-down btn hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
     </div>
     
 
     <!-- question buttons B -->
     
     <div id="b-buttons" class="hidden" >
-      <div class="btn-ema luup" onclick="goToChapter('b5i_ema')">
+      <div class="btn-ema luup btn" onclick="goToChapter('b5i_ema')">
         <img src="assets/buttons/luup/lilla.png">
-        <img class="infotext t-top" src="assets/buttons/luup/sprites/amandaEma/1.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/amandaEma/1.png">
       </div>
-      <div class="btn-haigla6de luup" onclick="goToChapter('b4i_haigla_ode')">
+      <div class="btn-haigla6de luup btn" onclick="goToChapter('b4i_haigla_ode')">
         <img src="assets/buttons/luup/punane.png">
-        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/haigla6de/1.png">
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/haigla6de/1.png">
       </div>
-      <div class="btn-kaalumine luup" onclick="goToChapter('b3i_kaalumine')">
+      <div class="btn-kaalumine luup btn" onclick="goToChapter('b3i_kaalumine')">
         <img src="assets/buttons/luup/kollane.png">
         <img class="infotext-bigger t-top" src="assets/buttons/luup/sprites/m66tmineKaalumine/1.png">
       </div>
-      <div class="btn-m2ngunurk luup" onclick="goToChapter('b6i_m2ngunurk')">
+      <div class="btn-m2ngunurk luup btn" onclick="goToChapter('b6i_m2ngunurk')">
         <img src="assets/buttons/luup/sinine.png">
         <img class="infotext t-bottom" src="assets/buttons/luup/sprites/m2nguasjad/1.png">
       </div>
       
-      <div class="next-chapter btn-edasi">
+      <div class="next-chapter btn-edasi btn">
         <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
         <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
       </div> 
@@ -51,49 +51,130 @@
 
    <!-- question buttons C -->
     <div id="c-buttons" class="hidden" >
-      <div class="btn-kasema luup" onclick="goToChapter('c5i_kasema')">
+      <div class="btn-kasema luup btn" onclick="goToChapter('c5i_kasema')">
         <img src="assets/buttons/luup/punane.png">
         <img class="infotext-bigger t-top" src="assets/buttons/luup/sprites/kasEma/1.png">
       </div>
-      <div class="btn-kasvalus luup" onclick="goToChapter('c3i_kasvalus')">
+      <div class="btn-kasvalus luup btn" onclick="goToChapter('c3i_kasvalus')">
         <img src="assets/buttons/luup/kollane.png">
         <img class="infotext-bigger t-top" src="assets/buttons/luup/sprites/kasValus/1.png">
       </div>
-      <div class="btn-millalkoju luup" onclick="goToChapter('c4i_millalkoju')">
+      <div class="btn-millalkoju luup btn" onclick="goToChapter('c4i_millalkoju')">
         <img src="assets/buttons/luup/lilla.png">
         <img class="infotext-bigger t-bottom" src="assets/buttons/luup/sprites/kauaHaiglas/1.png">
       </div>
       
-      <div class="next-chapter btn-edasi">
+      <div class="next-chapter btn-edasi btn">
         <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
         <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
       </div> 
     </div>
 
-     <!-- video controls -->
+
+    <!-- question buttons G -->
+
+    <div id="g-buttons" class="hidden" >
+      <div class="btn-valgustid luup btn" onclick="goToChapter('g6i_valgustid')">
+        <img src="assets/buttons/luup/lilla.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/valgustid/1.png">
+      </div>
+      <div class="btn-opiode luup btn" onclick="goToChapter('g4i_opiode')">
+        <img src="assets/buttons/luup/punane.png">
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/operatsiooni6ed/1.png">
+      </div>
+      <div class="btn-narkoosiaparatuur luup btn" onclick="goToChapter('g7i_narkoosiaparatuur')">
+        <img src="assets/buttons/luup/kollane.png">
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/aparaadid/1.png">
+      </div>
+      <div class="btn-telekas luup btn" onclick="goToChapter('g3i_telekas')">
+        <img src="assets/buttons/luup/sinine.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/ekraan/1.png">
+      </div>
+
+      <div class="btn-opilaud luup btn" onclick="goToChapter('g5i_opilaud')">
+        <img src="assets/buttons/luup/roheline.png">
+        <!--
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/operatsiooni6ed/1.png">
+        -->
+      </div>
+
+      <div class="btn-narkoosi6de luup btn" onclick="goToChapter('g8i_narkoosi_ode')">
+        <img src="assets/buttons/luup/punane.png">
+        <!--
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/haigla6de/1.png">
+        -->
+      </div>
+      
+      <div class="next-chapter btn-edasi btn">
+        <img class="btn-up" src="assets/buttons/kutsumeAmanda/1.png" alt="Vaata filmi!">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+      </div> 
+    </div>
+
+    <!-- question buttons I -->
+
+    <div id="i-buttons" class="hidden" >
+      <div class="btn-opiema luup btn" onclick="goToChapter('i4i_ema')">
+        <img src="assets/buttons/luup/lilla.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/amandaEma/1.png">
+      </div>
+      <div class="btn-vererohk luup btn" onclick="goToChapter('i5i_vererohk')">
+        <img src="assets/buttons/luup/punane.png">
+        <!--
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/">
+        -->
+      </div>
+      <div class="btn-pulssoksymeeter luup btn" onclick="goToChapter('i7i_pulssoksymeeter')">
+        <img src="assets/buttons/luup/kollane.png">
+        <img class="infotext t-top-left" src="assets/buttons/luup/sprites/pulsoksymeeter/1.png">
+      </div>
+      <div class="btn-monitorid luup btn" onclick="goToChapter('i3i_monitorid')">
+        <img src="assets/buttons/luup/sinine.png">
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/narkoosimonitorid/1.png">
+      </div>
+
+      <div class="btn-ekg luup btn" onclick="goToChapter('i6i_ekg')">
+        <img src="assets/buttons/luup/roheline.png">
+        <img class="infotext t-top" src="assets/buttons/luup/sprites/ekg/1.png">
+      </div>
+
+      <div class="btn-kanyyl luup btn" onclick="goToChapter('i8i_kanyyl')">
+        <img src="assets/buttons/luup/punane.png">
+        <!--
+        <img class="infotext t-bottom" src="assets/buttons/luup/sprites/haigla6de/1.png">
+        -->
+      </div>
+      
+      <div class="next-chapter btn-edasi btn">
+        <img class="btn-up" src="assets/buttons/narkoosiksValmis/1.png" alt="Vaata filmi!">
+        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!" onclick="nextChapter()">
+      </div> 
+    </div>
+
+    <!-- video controls -->
     <div class="player__controls hidden">
-      <div class="toggle">
+      <div class="toggle btn">
         <img class="btn-up" src="assets/buttons/pause/1.png" alt="Peata/mängi!">
         <img class="btn-down hidden" src="assets/buttons/pause/2.png" alt="Peata/mängi!">
     
       </div>
 
-      <div class="exit" >
+      <div class="exit btn" onclick="nextFrame()">
         <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
-        <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!" onclick="nextFrame()">
+        <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!">
       </div>
 
-      <div class="next-chapter" >
-        <img class="btn-up" src="assets/buttons/next/1.png" alt="Järgmine Peatükk!">
-        <img class="btn-down hidden" src="assets/buttons/next/2.png" alt="Järgmine Peatükk!" onclick="nextChapter()">
+      <div class="next-chapter btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/next/1.png" alt="Järgmine Peatükk!" >
+        <img class="btn-down hidden" src="assets/buttons/next/2.png" alt="Järgmine Peatükk!">
       </div>
 
-      <div class="previous-chapter" >
+      <div class="previous-chapter btn" onclick="previousChapter()">
         <img class="btn-up" src="assets/buttons/previous/1.png" alt="Eelmine Peatükk!">
-        <img class="btn-down hidden" src="assets/buttons/previous/2.png" alt="Eelmine Peatükk!" onclick="previousChapter()">
+        <img class="btn-down hidden" src="assets/buttons/previous/2.png" alt="Eelmine Peatükk!" >
       </div>
      
-      <div class ="fullscreen-btn">
+      <div class ="fullscreen-btn btn">
         <img class="btn-up" src="assets/buttons/fullscreen/1.png" alt="Suureks!">
         <img class="btn-down hidden" src="assets/buttons/fullscreen/2.png" alt="Suureks!">
       </div>

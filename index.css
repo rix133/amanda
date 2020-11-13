@@ -59,7 +59,7 @@ html {
   
   .player__controls > * {
     flex:1;
-    width: 9%;
+    width: 8%;
     position: absolute;
     margin: auto 0px;
     bottom: 5%;
@@ -68,28 +68,29 @@ html {
 
   
   .fullscreen-btn { 
-    left: 90%;
+    left: 89%;
   
   }
 
   .toggle{
-    left: 15%;
+    left: 17%;
   }
   .exit{
-    left: 1%;
+    left: 2%;
   }
 
   .next-chapter{
-    left: 22%;
+    left: 24%;
   }
 
   .previous-chapter{
-    left: 8%;
+    left: 10%;
   }
   
   
   video::-webkit-media-controls {
-    display:none !important;
+    /*display:none !important;*/
+    *display:none !important;
   }
   
 
@@ -99,6 +100,14 @@ html {
     from {opacity: 0%; }
     to {opacity: 100%; }
   }
+
+img{
+    display: inline;
+    width: 100%;
+}
+.player .hidden {
+  display: none;
+}
 
 
 .watch-button{
@@ -114,6 +123,8 @@ html {
 }
 
 .c-buttons,
+.g-buttons,
+.i-buttons,
 .b-buttons{
    display: inline;
    z-index: 50;
@@ -123,6 +134,13 @@ html {
 
 }
 
+.btn-edasi{
+  position: absolute;
+  bottom: 19%;
+  left: 75%;
+}
+
+/*part C*/
 .btn-kasema{
   position: absolute;
   bottom: 66%;
@@ -140,7 +158,7 @@ html {
   bottom: 50%;
   left: 70%;
 }
-
+/*part B*/
 .btn-haigla6de{
   position: absolute;
   bottom: 50%;
@@ -159,11 +177,84 @@ html {
   left: 83%;
 }
 
-.btn-edasi{
+/*part G*/
+
+.btn-valgustid {
   position: absolute;
-  bottom: 23%;
-  left: 75%;
+  bottom: 87%;
+  left: 67%;
 }
+
+.btn-opiode {
+  position: absolute;
+  bottom: 52%;
+  left: 33%;
+}
+
+.btn-narkoosiaparatuur {
+  position: absolute;
+  bottom: 52%;
+  left: 73%;
+}
+
+.btn-telekas {
+  position: absolute;
+  bottom: 79%;
+  left: 18%;
+}
+
+.btn-opilaud {
+  position: absolute;
+  bottom: 33%;
+  left: 48%;
+}
+
+.btn-narkoosi6de {
+  position: absolute;
+  bottom: 51%;
+  left: 90%;
+}
+
+/*part I*/
+
+
+.btn-monitorid {
+  position: absolute;
+  bottom: 82%;
+  left: 40%;
+}
+
+.btn-opiema {
+  position: absolute;
+  bottom: 52%;
+  left: 13%;
+}
+
+.btn-vererohk {
+  position: absolute;
+  bottom: 26%;
+  left: 33%;
+}
+
+.btn-ekg {
+  position: absolute;
+  bottom: 25%;
+  left: 47%;
+}
+
+.btn-pulssoksymeeter {
+  position: absolute;
+  bottom: 2%;
+  left: 73%;
+}
+
+.btn-kanyyl {
+  position: absolute;
+  bottom: 13%;
+  left: 66%;
+}
+
+/*Magifier general*/
 
 .luup{
   width: 5%;
@@ -172,17 +263,27 @@ html {
 
 .t-bottom{
   bottom: -80%;
+  left: 30%;
 }
 
+.t-bottom-left{
+  bottom: -80%;
+  left: -70%;
+}
 
 .t-top{
   bottom: 110%;
+  left:0%;
+}
+
+.t-top-left{
+  bottom: 110%;
+  left: -110%;
 }
 .infotext-bigger,
 .infotext-biggest,
 .infotext{
   position: absolute;
-  left: 10%;
   transition: transform 150ms ease-out;
   transform-origin: center;
 }
@@ -190,6 +291,7 @@ html {
 .luup:hover .infotext{
   cursor: pointer;
   transform: scale(4);
+  z-index: 60;
   
 }
 
@@ -211,32 +313,21 @@ html {
 }
 
 
-img{
+/*video controls*/
+.btn:active .btn-down{
     display: inline;
-    width: 100%;
 }
-.exit:hover .btn-down,
-.next-chapter:hover .btn-down,
-.previous-chapter:hover .btn-down,
-.toggle:hover .btn-down,
-.fullscreen-btn:hover .btn-down,
-.watch-button:hover .btn-down{
-    display: inline;
-    cursor: pointer;
-}
-.exit:hover .btn-up,
-.next-chapter:hover .btn-up,
-.previous-chapter:hover .btn-up,
-.toggle:hover .btn-up,
-.fullscreen-btn:hover .btn-up,
-.watch-button:hover .btn-up {
+.btn:active .btn-up {
     display: none;
     
 }
 
- .player .hidden {
-    display: none;
- }
+.btn{
+  cursor: pointer;
+}
+
+
+ /*development*/
 
  .video-overlay{
    opacity: 50%;
