@@ -109,6 +109,10 @@ img{
   display: none;
 }
 
+.player .player__controls .hidden {
+  display: none;
+}
+
 
 .watch-button{
    display: inline;

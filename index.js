@@ -129,7 +129,9 @@ function previousChapter(){
 }
 
 function goToChapter(cueID){
-    cue.forcedExit = true;
+    if(cue){
+      cue.forcedExit = true;
+    }
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
 
@@ -154,6 +156,27 @@ function updateControlDisplay(data){
   else{
     controls.className = "player__controls";
   }
+  // for last video find next chapter btn and hide it
+  if(data.endAction == "stop"){
+    let nextbtn = controls.querySelector(".next-chapter");
+    nextbtn.className = nextbtn.className + " hidden";
+  }
+
+}
+
+function playFromStart(){
+  goToChapter('a_intro');
+  let nextbtn = controls.querySelector(".next-chapter");
+  nextbtn.className = "next-chapter btn";
+  let togglebtn = controls.querySelector(".toggle");
+  togglebtn.className = "toggle btn";
+  let prevbtn = controls.querySelector(".previous-chapter");
+  prevbtn.className = "previous-chapter btn";
+  if(video.paused){
+    let startDiv = document.getElementById("start-video");
+    startDiv.className = "";
+  }
+  
 }
 
 
@@ -174,7 +197,7 @@ if(Hls.isSupported()) {
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
       //video.muted = true;
-      video.currentTime = 0;
+      video.currentTime = 1050;
       var metaTrack  = video.textTracks[0];
       
       
@@ -200,39 +223,34 @@ if(Hls.isSupported()) {
               updateControlDisplay(cue.data);
               
               cue.onexit = function(e){
-                //console.log("exit "+this.id);
+                if(activeOverlay){
+                  activeOverlay.className ="hidden";
+                }
                 let endAction = this.data.endAction;
                   if(endAction == "goToStart"){
                     if(!this.forcedExit){
                         video.currentTime = this.startTime;
-                    }
-                    else{activeOverlay.className ="hidden";}
-                    
+                    } 
                   }
                   if(endAction == "goToNext"){
-                    if(activeOverlay){
-                      activeOverlay.className ="hidden";
+                    if(!this.forcedExit){
+                      goToChapter(this.data.nextChapterID);
+                    } 
                   }
-                  if(!this.forcedExit){
-                    goToChapter(this.data.nextChapterID);
-                  }
+                  if(endAction == "continue"){
+                    //do nothing special just hide activeoverlay
                     
                   }
-
-                  if(endAction == "continue"){
-                    if(activeOverlay){
-                        activeOverlay.className ="hidden";
-                    }
-                  }
                   if(endAction == "goToPrevious"){
-                    if(activeOverlay){
-                        activeOverlay.className ="hidden";
                         goToChapter(this.data.previousChapterID);
-                    }
                   }
-
                   if(endAction == "stop"){                
-                      video.pause()
+                      video.pause();
+                      let togglebtn = controls.querySelector(".toggle");
+                      togglebtn.className = togglebtn.className + " hidden";
+                      let prevbtn = controls.querySelector(".previous-chapter");
+                      prevbtn.className = prevbtn.className + " hidden";
+
                   }
                   
               }

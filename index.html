@@ -32,6 +32,36 @@
       </div> 
     </div>
 
+
+    <div id="operatsioonile-btn" class="hidden" >
+      <div class="btn-edasi btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/operatsioonile/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/operatsioonile/2.png" alt="Vaata edasi!">
+      </div> 
+    </div>
+    <div id="operatsioonituppa-btn" class="hidden" >
+      <div class="btn-edasi btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/operatsioonituppa/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/operatsioonituppa/2.png" alt="Vaata edasi!">
+      </div> 
+    </div>
+    
+    <div id="tagasi-palatisse-btn" class="hidden" >
+      <div class="btn-edasi btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/tagasiPalatisse/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/tagasiPalatisse/2.png" alt="Vaata edasi!">
+      </div> 
+    </div>
+
+    <div id="vaata-uuesti-btn" class="hidden" >
+      <div class="btn-edasi btn" onclick="nextChapter()">
+        <img class="btn-up" src="assets/buttons/vaataUuesti/1.png" alt="Vaata algusest!">
+        <img class="btn-down hidden" src="assets/buttons/vaataUuesti/2.png" alt="Vaata algusest!">
+      </div> 
+    </div>
+
+
+
     <!-- question buttons B -->
     
     <div id="b-buttons" class="hidden" >
@@ -53,8 +83,8 @@
       </div>
       
       <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
-        <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+        <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/edasi/2.png" alt="Vaata edasi!">
       </div> 
     </div>
 
@@ -74,8 +104,8 @@
       </div>
       
       <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
-        <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+        <img class="btn-up" src="assets/buttons/edasi/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/edasi/2.png" alt="Vaata edasi!">
       </div> 
     </div>
 
@@ -112,8 +142,8 @@
       </div>
       
       <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
-        <img class="btn-up" src="assets/buttons/kutsumeAmanda/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+        <img class="btn-up" src="assets/buttons/kutsumeAmanda/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/kutsumeAmanda/2.png" alt="Vaata edasi!">
       </div> 
     </div>
 
@@ -148,10 +178,14 @@
       </div>
       
       <div class="next-chapter btn-edasi btn" onclick="nextChapter()">
-        <img class="btn-up" src="assets/buttons/narkoosiksValmis/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/vaataFilmi/2.png" alt="Vaata filmi!">
+        <img class="btn-up" src="assets/buttons/narkoosiksValmis/1.png" alt="Vaata edasi!">
+        <img class="btn-down hidden" src="assets/buttons/narkoosiksValmis/2.png" alt="Vaata edasi!">
       </div> 
     </div>
+
+    <!-- other buttons -->
+   
+
 
     <!-- video controls -->
     <div class="player__controls hidden">
@@ -161,10 +195,11 @@
     
       </div>
 
-      <div class="exit btn" onclick="goToChapter('a_intro')">
+      <div class="exit btn" onclick="playFromStart()">
         <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
         <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!">
       </div>
+
 
       <div class="next-chapter btn" onclick="nextChapter()">
         <img class="btn-up" src="assets/buttons/next/1.png" alt="Järgmine Peatükk!" >
