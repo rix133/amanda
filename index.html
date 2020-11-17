@@ -11,7 +11,6 @@
       <!-- overlay image for button placement
      <div class="video-overlay"><img src="amandaFlash/d.png"></div>
         -->
-     
       <video id="video" class="player__video viewer" disablePictureInPicture>
         <track kind="metadata" src="assets/video/master.vtt" srclang="en" label="metainfo">
 
@@ -25,11 +24,17 @@
       </div> 
     </div>
 
-    <div id="start-video">
+    <div id="start-video">  
+        <div class ="sound-btn btn"  onclick="firstPlay()">
+          <img class="btn-up hidden" src="assets/buttons/sound/1.png" alt="Vaigista!">
+          <img class="btn-down" src="assets/buttons/sound/2.png" alt="Vaigista!">
+      </div>
+      <!--
       <div class="btn-edasi btn" onclick="firstPlay()">
         <img class="btn-up" src="assets/buttons/et/vaataFilmi/1.png" alt="Vaata filmi!">
         <img class="btn-down hidden" src="assets/buttons/et/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
+      -->
     </div>
 
 
@@ -209,6 +214,11 @@
       <div class="previous-chapter btn" onclick="previousChapter()">
         <img class="btn-up" src="assets/buttons/previous/1.png" alt="Eelmine Peatükk!">
         <img class="btn-down hidden" src="assets/buttons/previous/2.png" alt="Eelmine Peatükk!" >
+      </div>
+
+      <div class ="sound-btn btn">
+        <img class="btn-up" src="assets/buttons/sound/1.png" alt="Vaigista!">
+        <img class="btn-down hidden" src="assets/buttons/sound/2.png" alt="Vaigista!">
       </div>
      
       <div class ="fullscreen-btn btn">

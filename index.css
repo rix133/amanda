@@ -55,8 +55,16 @@ html {
     dom and shows the custom player in full screen mode instead */
   }
   
+  #start-video .sound-btn{
+    flex:1;
+    width: 8%;
+    position: absolute;
+    margin: auto 0px;
+    bottom: 5%;
+    left: 90%;  
+  }
     
-  
+
   .player__controls > * {
     flex:1;
     width: 8%;
@@ -70,6 +78,10 @@ html {
   .fullscreen-btn { 
     left: 89%;
   
+  }
+
+  .sound-btn { 
+    left: 80%;  
   }
 
   .toggle{

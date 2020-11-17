@@ -13,11 +13,15 @@ const toggle       =  controls.querySelector('.toggle');
 
 const fullscreen   =  controls.querySelector('.fullscreen-btn');
 
+const sound = controls.querySelector('.sound-btn');
+
+const language = document.getElementsByTagName("html")[0].getAttribute("lang");
+
 
 /* Build out functions */ 
 
 function firstPlay(){
-  video.play();
+  video.muted = false;
   let startDiv = document.getElementById("start-video");
   startDiv.className = "hidden";
 
@@ -39,9 +43,16 @@ function detectKeypress(e) {
 }
 
 // Update button on play/pause
-function updateButton() {
-  const icon = this.paused ? 'assets/buttons/pause/2.png' : 'assets/buttons/pause/1.png';
+function updatePlayButton() {
+  const icon = video.paused ? 'assets/buttons/pause/2.png' : 'assets/buttons/pause/1.png';
   let defaultImg = toggle.querySelector(".btn-up");
+  defaultImg.src = icon;
+}
+
+// Update button on mute/unmute
+function updateSoundButton() {
+  const icon = video.muted ? 'assets/buttons/sound/2.png' : 'assets/buttons/sound/1.png';
+  let defaultImg = sound.querySelector(".btn-up");
   defaultImg.src = icon;
 }
 
@@ -108,13 +119,15 @@ function logTime(){
 // Click events
 toggle.addEventListener('click', togglePlay);
 fullscreen.addEventListener('click', toggleFullscreen);
+sound.addEventListener('click', toggleSound);
 
 // Keypress (Play/Pause)
 //window.addEventListener('keydown', detectKeypress);
 
 // Play/Pause events 
-video.addEventListener('play', updateButton);
-video.addEventListener('pause', updateButton);
+video.addEventListener('play', updatePlayButton);
+video.addEventListener('pause', updatePlayButton);
+video.addEventListener('volumechange', updateSoundButton);
 
 
 
@@ -179,6 +192,17 @@ function playFromStart(){
   
 }
 
+function toggleSound(){
+  if(video.muted){
+    video.muted = false;
+  }
+  else{
+    video.muted = true;
+  }
+}
+
+
+
 
 var activeOverlay;
     var activeOverlayClass;
@@ -192,12 +216,12 @@ if(Hls.isSupported()) {
     var hls = new Hls({
         debug: false
     });
-    hls.loadSource('assets/video/et/playlist.m3u8');
+    hls.loadSource('assets/video/'+language+'/playlist.m3u8');
     hls.attachMedia(video);
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
-      //video.muted = true;
-      video.currentTime = 365;
+      video.muted = true;
+      video.currentTime = 0;
       var metaTrack  = video.textTracks[0];
       
       
@@ -256,7 +280,7 @@ if(Hls.isSupported()) {
               }
           }
       }
-      //video.play();
+      video.play();
       
   });
  }
