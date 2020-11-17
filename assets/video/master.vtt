@@ -1,0 +1,338 @@
+WEBVTT FILE
+
+a_intro
+00:00:00.000 --> 00:00:05.080
+{
+    "chapterID": "a",
+    "endAction": "continue",
+    "nextChapterID": "b_intro",
+    "hideControls": true
+}
+
+a_loop
+00:00:05.081 --> 00:00:54.120
+{
+    "chapterID": "a",
+    "endAction": "goToStart", 
+    "displayClass": "watch-button", 
+    "nextChapterID": "b_intro",
+    "previousChapterID": "a_intro",
+    "hideControls": true
+}
+
+b_intro
+00:00:54.121 --> 00:02:11.760
+{
+    "chapterID": "b",
+    "endAction": "continue",  
+    "nextChapterID": "b_loop",
+    "previousChapterID": "a_loop"
+}
+
+b_loop
+00:02:11.761 --> 00:02:22.400
+{
+    "chapterID": "b",
+    "endAction": "goToNext",  
+    "previousChapterID": "b_intro",
+    "nextChapterID": "c_intro",
+    "displayClass": "b-buttons"
+}
+
+c_intro
+00:02:22.401 --> 00:03:37.880
+{
+    "chapterID": "c",
+    "endAction": "continue",
+    "previousChapterID": "b_loop",
+    "nextChapterID": "c_loop"
+}
+
+c_loop
+00:03:37.881 --> 00:03:59.240
+{
+    "chapterID": "c",
+    "endAction": "goToNext",  
+    "previousChapterID": "c_intro",
+    "nextChapterID": "d_intro_loop",
+    "displayClass": "c-buttons"
+}
+
+d_intro_loop
+00:03:59.241 --> 00:06:15.640
+{
+    "chapterID": "d",
+    "endAction": "continue",
+    "previousChapterID": "c_loop",
+    "nextChapterID": "e_intro_loop"
+}
+
+d_loop
+00:06:15.680 --> 00:06:58.120
+{
+    "chapterID": "nuppOperatsioonile",
+    "displayClass": "operatsioonile-btn",
+    "endAction": "continue",
+    "previousChapterID": "c_loop",
+    "nextChapterID": "e_intro_loop"
+}
+
+e_intro_loop
+00:06:58.121 --> 00:07:42.080
+{
+    "chapterID": "e",
+    "endAction": "continue",  
+    "previousChapterID": "d_intro_loop",
+    "nextChapterID": "g_intro"
+}
+
+
+e_loop
+00:07:42.120 --> 00:07:57.640
+{
+    "chapterID": "e",
+    "displayClass": "operatsioonituppa-btn",
+    "endAction": "continue",  
+    "previousChapterID": "d_intro_loop",
+    "nextChapterID": "g_intro"
+}
+
+g_intro
+00:07:57.680 --> 00:08:41.080
+{
+    "chapterID": "g",
+    "endAction": "continue",
+    "previousChapterID": "e_intro_loop",
+    "nextChapterID": "g_loop"
+}
+
+g_loop
+00:08:41.081 --> 00:09:06.720
+{
+    "chapterID": "g",
+    "endAction": "goToNext",  
+    "previousChapterID": "g_intro",
+    "nextChapterID": "i_intro",
+    "displayClass": "g-buttons"
+}
+
+i_intro
+00:09:06.721 --> 00:10:37.040
+{
+    "chapterID": "i",
+    "endAction": "continue",
+    "previousChapterID": "g_loop",
+    "nextChapterID": "i_loop"
+}
+
+i_loop
+00:10:37.041 --> 00:10:48.640
+{
+    "chapterID": "i",
+    "endAction": "goToNext",  
+    "previousChapterID": "i_intro",
+    "nextChapterID": "j_intro_loop",
+    "displayClass": "i-buttons"
+}
+
+j_intro_loop
+00:10:48.641 --> 00:11:58.760
+{
+    "chapterID": "j",
+    "endAction": "continue",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "l_intro_loop"
+}
+
+l_intro_loop
+00:11:58.761 --> 00:12:54.640
+{
+    "chapterID": "l",
+    "endAction": "continue",  
+    "previousChapterID": "j_intro_loop",
+    "nextChapterID": "m_end"
+}
+
+m_end
+00:12:54.641 --> 00:13:52.120
+{
+    "chapterID": "m",
+    "endAction": "stop",  
+    "previousChapterID": "l_intro_loop",
+    "nextChapterID": "a_intro"
+}
+
+
+b3i_kaalumine
+00:13:52.200 --> 00:14:05.640
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+b4i_haigla_ode
+00:14:05.720 --> 00:14:16.520
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+
+b5i_ema
+00:14:16.600 --> 00:14:27.120
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+b6i_m2ngunurk
+00:14:27.200 --> 00:14:42.120
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "b_loop",
+    "nextChapterID": "b_loop"
+}
+
+c3i_kasvalus
+00:14:42.240 --> 00:14:51.960
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+
+c4i_millalkoju
+00:14:52.040 --> 00:15:05.600
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+
+c5i_kasema
+00:15:05.680 --> 00:15:09.360
+{
+    "chapterID": "b",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "c_loop",
+    "nextChapterID": "c_loop"
+}
+
+g3i_telekas
+00:15:09.480 --> 00:15:24.080
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g4i_opiode
+00:15:24.120 --> 00:15:41.760
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g5i_opilaud
+00:15:41.840 --> 00:16:02.600
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g6i_valgustid
+00:16:02.680 --> 00:16:14.520
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g7i_narkoosiaparatuur
+00:16:14.600 --> 00:16:24.360
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+g8i_narkoosi_ode
+00:16:24.440 --> 00:16:39.960
+{
+    "chapterID": "g",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "g_loop",
+    "nextChapterID": "g_loop"
+}
+
+i3i_monitorid
+00:16:40.080 --> 00:16:47.640
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i4i_ema
+00:16:47.720 --> 00:16:58.360
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i5i_vererohk
+00:16:58.440 --> 00:17:06.080
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i6i_ekg
+00:17:06.160 --> 00:17:16.440
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i7i_pulssoksymeeter
+00:17:16.520 --> 00:17:25.560
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}
+
+i8i_kanyyl
+00:17:25.640 --> 00:17:36.440
+{
+    "chapterID": "i",
+    "endAction": "goToPrevious",  
+    "previousChapterID": "i_loop",
+    "nextChapterID": "i_loop"
+}

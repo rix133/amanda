@@ -112,8 +112,8 @@ img{
 .player .player__controls .hidden {
   display: none;
 }
-
-
+.operatsioonile-btn,
+.operatsioonituppa-btn,
 .watch-button{
    display: inline;
    z-index: 50;

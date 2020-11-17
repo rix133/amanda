@@ -192,12 +192,12 @@ if(Hls.isSupported()) {
     var hls = new Hls({
         debug: false
     });
-    hls.loadSource('media/est/master.m3u8');
+    hls.loadSource('assets/video/et/playlist.m3u8');
     hls.attachMedia(video);
 
     hls.on(Hls.Events.MEDIA_ATTACHED, function() {
       //video.muted = true;
-      video.currentTime = 1050;
+      video.currentTime = 365;
       var metaTrack  = video.textTracks[0];
       
       
