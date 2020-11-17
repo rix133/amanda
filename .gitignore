@@ -1,1 +1,5 @@
 /node_modules
+/assets/video/et/1920/*.ts
+/assets/video/et/1280/*.ts
+/assets/video/ru/1920/*.ts
+/assets/video/ru/1280/*.ts
