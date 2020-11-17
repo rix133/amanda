@@ -148,7 +148,6 @@ function goToChapter(cueID){
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
 
-    logTime();
 }
 
 function parseRawCues(cues){
@@ -214,7 +213,8 @@ var activeOverlay;
 if(Hls.isSupported()) {
     
     var hls = new Hls({
-        debug: false
+        debug: false,
+        startLevel: 1
     });
     hls.loadSource('assets/video/'+language+'/playlist.m3u8');
     hls.attachMedia(video);
