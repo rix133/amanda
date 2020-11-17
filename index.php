@@ -11,11 +11,11 @@ if($lc == "et"){
     header("location: et.html");
     exit();
 } else if($lc == "ru"){
-    header("location: ru.php");
+    header("location: ru.html");
     exit();
 }
 else{ // don't forget the default case if $lc is empty
-    header("location: et.php");
+    header("location: et.html");
     exit();
 }
 ?>
