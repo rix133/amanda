@@ -167,6 +167,8 @@ function updateControlDisplay(data){
   }
   else{
     controls.className = "player__controls";
+    let startDiv = document.getElementById("start-video");
+    startDiv.className = "hidden";
   }
   // for last video find next chapter btn and hide it
   if(data.endAction == "stop"){
@@ -185,6 +187,9 @@ function playFromStart(){
   let prevbtn = controls.querySelector(".previous-chapter");
   prevbtn.className = "previous-chapter btn";
   if(video.paused){
+    video.play();
+  }
+  if(video.muted){
     let startDiv = document.getElementById("start-video");
     startDiv.className = "";
   }
@@ -268,12 +273,20 @@ if(Hls.isSupported()) {
                   if(endAction == "goToPrevious"){
                         goToChapter(this.data.previousChapterID);
                   }
-                  if(endAction == "stop"){                
+                  if(endAction == "stop"){ 
+                    if(!this.forcedExit){               
                       video.pause();
                       let togglebtn = controls.querySelector(".toggle");
                       togglebtn.className = togglebtn.className + " hidden";
                       let prevbtn = controls.querySelector(".previous-chapter");
                       prevbtn.className = prevbtn.className + " hidden";
+                    }
+                    // reset next btn state
+                    if(this.forcedExit){
+                      let nextbtn = controls.querySelector(".next-chapter");
+                      nextbtn.className = "next-chapter btn";
+                    }
+
 
                   }
                   
