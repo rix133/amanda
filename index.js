@@ -17,7 +17,7 @@ const sound = controls.querySelector('.sound-btn');
 
 const language = document.getElementsByTagName("html")[0].getAttribute("lang");
 
-
+/*
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -28,7 +28,7 @@ video.addEventListener('play', () => {
   }
   requestAnimationFrame(step);
 })
-
+*/
 
 /* Build out functions */ 
 
@@ -283,11 +283,11 @@ if(Hls.isSupported()) {
                     
                   }
                   if(endAction == "goToPrevious"){
+                        video.pause();
                         goToChapter(this.data.previousChapterID);
                   }
                   if(endAction == "stop"){ 
                     if(!this.forcedExit){               
-                      video.pause();
                       let togglebtn = controls.querySelector(".toggle");
                       togglebtn.className = togglebtn.className + " hidden";
                       let prevbtn = controls.querySelector(".previous-chapter");
