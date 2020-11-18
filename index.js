@@ -18,6 +18,18 @@ const sound = controls.querySelector('.sound-btn');
 const language = document.getElementsByTagName("html")[0].getAttribute("lang");
 
 
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+video.addEventListener('play', () => {
+  function step() {
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+    requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step);
+})
+
+
 /* Build out functions */ 
 
 function firstPlay(){
