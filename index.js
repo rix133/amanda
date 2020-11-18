@@ -28,6 +28,8 @@ video.addEventListener('play', () => {
   }
   requestAnimationFrame(step);
 })
+TODO Buffering handling!
+https://stackoverflow.com/questions/21399872/how-to-detect-whether-html5-video-has-paused-for-buffering
 */
 
 /* Build out functions */ 
