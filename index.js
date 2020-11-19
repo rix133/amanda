@@ -169,17 +169,8 @@ video.addEventListener('volumechange', updateSoundButton);
 video.addEventListener('seeked', videoTimepointChanged);
 
 
-function videoTimepointChanging(e){
-  if(!video.paused){
-    video.pause();
-  } 
-}
 
 function videoTimepointChanged(e){
-  if(video.paused){
-    //video.play();
-  }
-  
   if(activeOverlayClass){
     activeOverlay = document.getElementById(activeOverlayClass);
     activeOverlay.className = activeOverlayClass;
@@ -199,11 +190,13 @@ function previousChapter(){
 }
 
 function goToChapter(cueID){
+  lastChangeForced = true;
     if(cue){
       cue.forcedExit = true;
     }
     var nextTimepoint = cues[cueID].startTime;
     video.currentTime = nextTimepoint;
+    
 
 }
 
@@ -307,7 +300,7 @@ if(Hls.isSupported()) {
               }
               
               cue.onexit = function(e){
-                lastChangeForced = this.forcedExit;
+
 
                 if(activeOverlay){
                   activeOverlay.className ="hidden";
@@ -324,11 +317,14 @@ if(Hls.isSupported()) {
                     } 
                   }
                   if(endAction == "continue"){
+                    lastChangeForced = false;
                     //do nothing special just hide activeoverlay                    
                     
                   }
                   if(endAction == "goToPrevious"){
+                    if(!this.forcedExit){
                         goToChapter(this.data.previousChapterID);
+                      }
                   }
                   if(endAction == "stop"){ 
                     if(!this.forcedExit){               
