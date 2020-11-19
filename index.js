@@ -47,11 +47,14 @@ function togglePlay() {
   video[method]();
 }
 
-// Detect press of spacebar, toggle play
+// Detect press of esc, exit fullscreen
 function detectKeypress(e) {
-	if (e.keyCode == 32) {
+	if (e.keyCode == 27) {
+	  //esc pressed
+  }
+  else if (e.keyCode == 32) {
 	  togglePlay();
-	} else {
+	}  else {
       return;
 	}
 }
@@ -83,6 +86,9 @@ function toggleFullscreen() {
 
 /* View in fullscreen */
 function openFullscreen() {
+  const icon = 'assets/buttons/fullscreen/2.png';
+  let defaultImg = fullscreen.querySelector(".btn-up");
+  defaultImg.src = icon;
   if (player.requestFullscreen) {
     player.requestFullscreen();
   } else if (player.webkitRequestFullscreen) { /* Safari */
@@ -94,6 +100,9 @@ function openFullscreen() {
 
 /* Close fullscreen */
 function closeFullscreen() {
+  const icon = 'assets/buttons/fullscreen/1.png';
+  let defaultImg = fullscreen.querySelector(".btn-up");
+  defaultImg.src = icon;
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.webkitExitFullscreen) { /* Safari */
@@ -125,6 +134,20 @@ function logTime(){
   }
 }
 
+document.addEventListener("fullscreenchange", onFullScreenChange, false);
+document.addEventListener("webkitfullscreenchange", onFullScreenChange, false);
+document.addEventListener("mozfullscreenchange", onFullScreenChange, false);
+
+function onFullScreenChange() {
+  var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+  if(fullscreenElement === null){
+    const icon = 'assets/buttons/fullscreen/1.png';
+    let defaultImg = fullscreen.querySelector(".btn-up");
+    defaultImg.src = icon;
+  }
+  // if in fullscreen mode fullscreenElement won't be null
+}
+
 
 
 /* Hook up the event listeners */ 
@@ -135,7 +158,7 @@ toggle.addEventListener('click', togglePlay);
 fullscreen.addEventListener('click', toggleFullscreen);
 sound.addEventListener('click', toggleSound);
 
-// Keypress (Play/Pause)
+// Keypress (Play/Pause) Esc
 //window.addEventListener('keydown', detectKeypress);
 
 // Play/Pause events 
