@@ -142,7 +142,27 @@ sound.addEventListener('click', toggleSound);
 video.addEventListener('play', updatePlayButton);
 video.addEventListener('pause', updatePlayButton);
 video.addEventListener('volumechange', updateSoundButton);
+//video.addEventListener('seeking', videoTimepointChanging);
+video.addEventListener('seeked', videoTimepointChanged);
 
+
+function videoTimepointChanging(e){
+  if(!video.paused){
+    video.pause();
+  } 
+}
+
+function videoTimepointChanged(e){
+  if(video.paused){
+    //video.play();
+  }
+  
+  if(activeOverlayClass){
+    activeOverlay = document.getElementById(activeOverlayClass);
+    activeOverlay.className = activeOverlayClass;
+  }
+  updateControlDisplay(cue.data);
+}
 
 
 function nextChapter(){
@@ -221,13 +241,13 @@ function toggleSound(){
 
 
 
-
+var lastChangeForced = false;
 var activeOverlay;
-    var activeOverlayClass;
-    var clickedBtn;
-    var cuesLoaded = false;
-    var cues;
-    var cue;
+var activeOverlayClass;
+var clickedBtn;
+var cuesLoaded = false;
+var cues;
+var cue;
 
 if(Hls.isSupported()) {
     
@@ -259,13 +279,13 @@ if(Hls.isSupported()) {
               cue.data = cues[cue.id].data;
               cue.forcedExit = false;
               activeOverlayClass = cue.data.displayClass;
-              if(activeOverlayClass){
-                  activeOverlay = document.getElementById(activeOverlayClass);
-                  activeOverlay.className = activeOverlayClass;
+              if(!lastChangeForced){
+                videoTimepointChanged();
               }
-              updateControlDisplay(cue.data);
               
               cue.onexit = function(e){
+                lastChangeForced = this.forcedExit;
+
                 if(activeOverlay){
                   activeOverlay.className ="hidden";
                 }
@@ -281,11 +301,10 @@ if(Hls.isSupported()) {
                     } 
                   }
                   if(endAction == "continue"){
-                    //do nothing special just hide activeoverlay
+                    //do nothing special just hide activeoverlay                    
                     
                   }
                   if(endAction == "goToPrevious"){
-                        video.pause();
                         goToChapter(this.data.previousChapterID);
                   }
                   if(endAction == "stop"){ 
