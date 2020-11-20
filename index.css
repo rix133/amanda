@@ -9,7 +9,7 @@ html {
   body {
     margin: 0 auto;
     padding: 0;
-    display:flex;
+    display: inline;
     min-height:100vh;
     align-items: center;
     justify-content: center;

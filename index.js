@@ -17,6 +17,8 @@ const sound = controls.querySelector('.sound-btn');
 
 const language = document.getElementsByTagName("html")[0].getAttribute("lang");
 
+document.getElementById("platform").innerHTML = platform.description;
+
 /*
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
