@@ -16,12 +16,12 @@
    viewBox="0 0 180 75"
    sodipodi:docname="operatsioonituppa_btn.svg"
    inkscape:version="1.0.1 (1.0.1+r75)"
-   inkscape:export-filename="/home/rix133/Documents/software/amanda/assets/buttons/operatsioonituppa/1.png"
-   inkscape:export-xdpi="100"
-   inkscape:export-ydpi="100"><metadata
+   inkscape:export-filename="2.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><rect
        x="135.37416"
        y="282.31293"
@@ -87,7 +87,7 @@
      inkscape:window-height="980"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="3.3703712"
+     inkscape:zoom="3.6427711"
      inkscape:cx="38.615741"
      inkscape:cy="37.687478"
      inkscape:window-x="0"
@@ -100,7 +100,7 @@
      inkscape:label="btn"
      transform="matrix(1.3333333,0,0,-1.3333333,0,666.66667)"><g
        id="g12"
-       style="display:none"
+       style="display:inline"
        inkscape:label="btn_down"
        transform="matrix(0.34687353,0,0,0.34687353,-20.385279,389.43769)"><g
          id="g14"
@@ -130,7 +130,7 @@
        inkscape:groupmode="layer"
        id="layer1"
        inkscape:label="btn_up"
-       style="display:inline"><g
+       style="display:none"><g
          id="g50"
          clip-path="url(#clipPath54)"
          style="display:inline"
