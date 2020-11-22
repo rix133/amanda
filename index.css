@@ -1,62 +1,56 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0 auto;
-    padding: 0;
-    display: inline;
-    min-height:100vh;
-    align-items: center;
-    justify-content: center;
-  }
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  display: inline;
+  min-height:100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.amanda{
+  width:100%;
+  overflow: hidden;
+}
+
   
   .player {
-    display:flex;
     max-width: 1920px;
     width:100%;
     position: relative;
-    font-size: 0;
     overflow: hidden;
   }
   
-  /* This css is only applied when fullscreen is active. */
-  .player:fullscreen {
-    max-width: none;
-    width: 100%;
-  }
   
-  .player:-webkit-full-screen {
-    max-width: none;
-    width: 100%;
-  }
+  
   
   .player__video {
     margin: 0 auto;
     width:100%;
     
   }
-  
+
   
   .player__controls {
-    display:inline;
+    margin: 0 auto;
     position: absolute;
-    left: 0;
-    bottom:2%;
     width: 100%;
-    flex-wrap:wrap;
-    color: #fff;
+    bottom: 18%;
     z-index: 2147483648; 
     /* This is ridiculous so that it overrides the shadow 
     dom and shows the custom player in full screen mode instead */
+
   }
   
   #start-video .sound-btn{
-    flex:1;
     width: 8%;
     position: absolute;
     margin: auto 0px;
@@ -66,13 +60,11 @@ html {
     
 
   .player__controls > * {
-    flex:1;
     width: 8%;
     position: absolute;
-    margin: auto 0px;
-    bottom: 5%;
+    margin: 0 auto;
   }
-  
+ 
 
   
   .fullscreen-btn { 
