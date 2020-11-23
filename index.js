@@ -336,7 +336,8 @@ if(Hls.isSupported()) {
                       }
                   }
                   if(endAction == "stop"){ 
-                    if(!this.forcedExit){               
+                    if(!this.forcedExit){  
+                      video.pause();             
                       let togglebtn = controls.querySelector(".toggle");
                       togglebtn.className = togglebtn.className + " hidden";
                       let prevbtn = controls.querySelector(".previous-chapter");
