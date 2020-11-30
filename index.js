@@ -10,15 +10,17 @@ const video        =  player.querySelector('.viewer');
 
 const controls      =  player.querySelector('.player__controls');
 
-const toggle       =  controls.querySelector('.toggle');
+const controlsRight      =  controls.querySelector('.controls-right');
 
-const fullscreen   =  controls.querySelector('.fullscreen-btn');
+const controlsLeft      =  controls.querySelector('.controls-left');
 
-const sound = controls.querySelector('.sound-btn');
+const toggle       =  controlsLeft.querySelector('.toggle');
+
+const fullscreen   =  controlsRight.querySelector('.fullscreen-btn');
+
+const sound = controlsRight.querySelector('.sound-btn');
 
 const language = document.getElementsByTagName("html")[0].getAttribute("lang");
-
-document.getElementById("platform").innerHTML = platform.description + " " + getScreenSize();
 
 /*
 const canvas = document.querySelector("canvas");
@@ -174,11 +176,6 @@ video.addEventListener('seeked', videoTimepointChanged);
 
 
 
-function getScreenSize() {
-  var heightPercent =  window.screen.width * window.devicePixelRatio  +"x"+ window.screen.height * window.devicePixelRatio;
-  return(heightPercent);
-}
-
 function videoTimepointChanged(e){
   if(activeOverlayClass){
     activeOverlay = document.getElementById(activeOverlayClass);
@@ -222,16 +219,14 @@ function parseRawCues(cues){
 
 function updateControlDisplay(data){
   if(data.hideControls){
-    controls.className = "player__controls hidden";
+    controlsLeft.className = "controls-left hidden";
   }
   else{
-    controls.className = "player__controls";
-    let startDiv = document.getElementById("start-video");
-    startDiv.className = "hidden";
+    controlsLeft.className = "controls-left";
   }
   // for last video find next chapter btn and hide it
   if(data.endAction == "stop"){
-    let nextbtn = controls.querySelector(".next-chapter");
+    let nextbtn = controlsLeft.querySelector(".next-chapter");
     nextbtn.className = nextbtn.className + " hidden";
   }
 
@@ -239,18 +234,14 @@ function updateControlDisplay(data){
 
 function playFromStart(){
   goToChapter('a_intro');
-  let nextbtn = controls.querySelector(".next-chapter");
+  let nextbtn = controlsLeft.querySelector(".next-chapter");
   nextbtn.className = "next-chapter btn";
-  let togglebtn = controls.querySelector(".toggle");
+  let togglebtn = controlsLeft.querySelector(".toggle");
   togglebtn.className = "toggle btn";
-  let prevbtn = controls.querySelector(".previous-chapter");
+  let prevbtn = controlsLeft.querySelector(".previous-chapter");
   prevbtn.className = "previous-chapter btn";
   if(video.paused){
     video.play();
-  }
-  if(video.muted){
-    let startDiv = document.getElementById("start-video");
-    startDiv.className = "";
   }
   
 }
@@ -338,14 +329,14 @@ if(Hls.isSupported()) {
                   if(endAction == "stop"){ 
                     if(!this.forcedExit){  
                       video.pause();             
-                      let togglebtn = controls.querySelector(".toggle");
+                      let togglebtn = controlsLeft.querySelector(".toggle");
                       togglebtn.className = togglebtn.className + " hidden";
-                      let prevbtn = controls.querySelector(".previous-chapter");
+                      let prevbtn = controlsLeft.querySelector(".previous-chapter");
                       prevbtn.className = prevbtn.className + " hidden";
                     }
                     // reset next btn state
                     if(this.forcedExit){
-                      let nextbtn = controls.querySelector(".next-chapter");
+                      let nextbtn = controlsLeft.querySelector(".next-chapter");
                       nextbtn.className = "next-chapter btn";
                     }
 

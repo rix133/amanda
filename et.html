@@ -3,12 +3,10 @@
   <head>
     <title>Amanda läheb operatsioonile</title>
     <script src="node_modules/hls.js/dist/hls.js"></script>
-    <script src="node_modules/platform/platform.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
-    <div id="platform"></div>
     <div class="amanda">
     <div class="player">
       <!-- overlay image for button placement
@@ -28,19 +26,6 @@
         <img class="btn-up" src="assets/buttons/et/vaataFilmi/1.png" alt="Vaata filmi!">
         <img class="btn-down hidden" src="assets/buttons/et/vaataFilmi/2.png" alt="Vaata filmi!">
       </div> 
-    </div>
-
-    <div id="start-video">  
-        <div class ="sound-btn btn"  onclick="firstPlay()">
-          <img class="btn-up hidden" src="assets/buttons/sound/1.png" alt="Vaigista!">
-          <img class="btn-down" src="assets/buttons/sound/2.png" alt="Vaigista!">
-      </div>
-      <!--
-      <div class="btn-edasi btn" onclick="firstPlay()">
-        <img class="btn-up" src="assets/buttons/et/vaataFilmi/1.png" alt="Vaata filmi!">
-        <img class="btn-down hidden" src="assets/buttons/et/vaataFilmi/2.png" alt="Vaata filmi!">
-      </div> 
-      -->
     </div>
 
 
@@ -199,37 +184,40 @@
 
 
     <!-- video controls -->
-    <div class="player__controls hidden">
-      <div class="toggle btn">
-        <img class="btn-up" src="assets/buttons/pause/1.png" alt="Peata/mängi!">
-        <img class="btn-down hidden" src="assets/buttons/pause/2.png" alt="Peata/mängi!">
-    
-      </div>
+    <div class="player__controls">
+      <div class="controls-left hidden">
+        <div class="toggle btn">
+          <img class="btn-up" src="assets/buttons/pause/1.png" alt="Peata/mängi!">
+          <img class="btn-down hidden" src="assets/buttons/pause/2.png" alt="Peata/mängi!">
+      
+        </div>
 
-      <div class="exit btn" onclick="playFromStart()">
-        <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
-        <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!">
-      </div>
+        <div class="exit btn" onclick="playFromStart()">
+          <img class="btn-up" src="assets/buttons/exit/1.png" alt="Algusesse!">
+          <img class="btn-down hidden" src="assets/buttons/exit/2.png" alt="Algusesse!">
+        </div>
 
 
-      <div class="next-chapter btn" onclick="nextChapter()">
-        <img class="btn-up" src="assets/buttons/next/1.png" alt="Järgmine Peatükk!" >
-        <img class="btn-down hidden" src="assets/buttons/next/2.png" alt="Järgmine Peatükk!">
-      </div>
+        <div class="next-chapter btn" onclick="nextChapter()">
+          <img class="btn-up" src="assets/buttons/next/1.png" alt="Järgmine Peatükk!" >
+          <img class="btn-down hidden" src="assets/buttons/next/2.png" alt="Järgmine Peatükk!">
+        </div>
 
-      <div class="previous-chapter btn" onclick="previousChapter()">
-        <img class="btn-up" src="assets/buttons/previous/1.png" alt="Eelmine Peatükk!">
-        <img class="btn-down hidden" src="assets/buttons/previous/2.png" alt="Eelmine Peatükk!" >
+        <div class="previous-chapter btn" onclick="previousChapter()">
+          <img class="btn-up" src="assets/buttons/previous/1.png" alt="Eelmine Peatükk!">
+          <img class="btn-down hidden" src="assets/buttons/previous/2.png" alt="Eelmine Peatükk!" >
+        </div>
       </div>
-
-      <div class ="sound-btn btn">
-        <img class="btn-up" src="assets/buttons/sound/1.png" alt="Vaigista!">
-        <img class="btn-down hidden" src="assets/buttons/sound/2.png" alt="Vaigista!">
-      </div>
-     
-      <div class ="fullscreen-btn btn">
-        <img class="btn-up" src="assets/buttons/fullscreen/1.png" alt="Suureks!">
-        <img class="btn-down hidden" src="assets/buttons/fullscreen/2.png" alt="Suureks!">
+      <div class="controls-right">
+        <div class ="sound-btn btn">
+          <img class="btn-up" src="assets/buttons/sound/1.png" alt="Vaigista!">
+          <img class="btn-down hidden" src="assets/buttons/sound/2.png" alt="Vaigista!">
+        </div>
+      
+        <div class ="fullscreen-btn btn">
+          <img class="btn-up" src="assets/buttons/fullscreen/1.png" alt="Suureks!">
+          <img class="btn-down hidden" src="assets/buttons/fullscreen/2.png" alt="Suureks!">
+        </div>
       </div>
     </div>
   </div>

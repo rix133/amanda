@@ -54,16 +54,9 @@ body {
 
   }
   
-  #start-video .sound-btn{
-    width: 8%;
-    position: absolute;
-    margin: auto 0px;
-    bottom: 5%;
-    left: 90%;  
-  }
-    
-
-  .player__controls > * {
+   
+  .player__controls .controls-right > *,
+  .player__controls .controls-left > * {
     width: 8%;
     position: absolute;
     margin: 0 auto;
