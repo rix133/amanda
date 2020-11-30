@@ -22,6 +22,8 @@ const sound = controlsRight.querySelector('.sound-btn');
 
 const language = document.getElementsByTagName("html")[0].getAttribute("lang");
 
+let isFirstPlay = true; 
+
 /*
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -38,13 +40,6 @@ https://stackoverflow.com/questions/21399872/how-to-detect-whether-html5-video-h
 */
 
 /* Build out functions */ 
-
-function firstPlay(){
-  video.muted = false;
-  let startDiv = document.getElementById("start-video");
-  startDiv.className = "hidden";
-
-}
 
 // toggle play/pause
 function togglePlay() {
@@ -247,6 +242,10 @@ function playFromStart(){
 }
 
 function toggleSound(){
+  if(isFirstPlay){
+    isFirstPlay = false;
+    video.currentTime = 0;
+  }
   if(video.muted){
     video.muted = false;
   }
