@@ -54,12 +54,21 @@ c_loop
     "chapterID": "c",
     "endAction": "goToNext",  
     "previousChapterID": "c_intro",
-    "nextChapterID": "d_intro_loop",
+    "nextChapterID": "d_kirurgi_visiit",
     "displayClass": "c-buttons"
 }
 
 d_intro_loop
-00:03:59.241 --> 00:06:15.640
+00:03:59.241 --> 00:04:02.680
+{
+    "chapterID": "d",
+    "endAction": "continue",
+    "previousChapterID": "c_loop",
+    "nextChapterID": "d_kirurgi_visiit"
+}
+
+d_kirurgi_visiit
+00:04:02.880 --> 00:06:15.640
 {
     "chapterID": "d",
     "endAction": "continue",
@@ -73,7 +82,7 @@ d_loop
     "chapterID": "nuppOperatsioonile",
     "displayClass": "operatsioonile-btn",
     "endAction": "continue",
-    "previousChapterID": "c_loop",
+    "previousChapterID": "d_kirurgi_visiit",
     "nextChapterID": "e_intro_loop"
 }
 
@@ -82,7 +91,7 @@ e_intro_loop
 {
     "chapterID": "e",
     "endAction": "continue",  
-    "previousChapterID": "d_intro_loop",
+    "previousChapterID": "d_kirurgi_visiit",
     "nextChapterID": "g_intro"
 }
 
@@ -93,7 +102,7 @@ e_loop
     "chapterID": "e",
     "displayClass": "operatsioonituppa-btn",
     "endAction": "continue",  
-    "previousChapterID": "d_intro_loop",
+    "previousChapterID": "d_kirurgi_visiit",
     "nextChapterID": "g_intro"
 }
 
