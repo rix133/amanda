@@ -191,6 +191,10 @@ function previousChapter(){
 }
 
 function goToChapter(cueID){
+  //canging chapters disables firstplay
+  if(isFirstPlay){
+    isFirstPlay = false;
+  }
   lastChangeForced = true;
     if(cue){
       cue.forcedExit = true;
