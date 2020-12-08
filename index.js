@@ -218,7 +218,7 @@ function parseRawCues(cues){
 
 function updateControlDisplay(data){
   if(data.hideControls){
-    controlsLeft.className = "controls-left hidden";
+    //controlsLeft.className = "controls-left hidden";
   }
   else{
     controlsLeft.className = "controls-left";
@@ -249,6 +249,7 @@ function toggleSound(){
   if(isFirstPlay){
     isFirstPlay = false;
     video.currentTime = 0;
+    controlsLeft.className = "controls-left";
   }
   if(video.muted){
     video.muted = false;

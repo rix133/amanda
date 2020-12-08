@@ -5,6 +5,7 @@ a_intro
 {
     "chapterID": "a",
     "endAction": "continue",
+    "previousChapterID": "a_intro",
     "nextChapterID": "b_intro",
     "hideControls": true
 }
