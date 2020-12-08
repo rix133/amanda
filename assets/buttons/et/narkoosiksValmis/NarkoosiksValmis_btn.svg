@@ -15,7 +15,7 @@
    height="75"
    viewBox="0 0 180 75"
    sodipodi:docname="NarkoosiksValmis_btn.svg"
-   inkscape:version="1.0.1 (1.0.1+r75)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    inkscape:export-filename="1.png"
    inkscape:export-xdpi="200"
    inkscape:export-ydpi="200"><metadata
@@ -83,17 +83,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="980"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="3.9371868"
      inkscape:cx="66.475786"
      inkscape:cy="37.275704"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10"
+     inkscape:current-layer="g12"
      inkscape:document-rotation="0" /><g
      id="g10"
      inkscape:groupmode="layer"
@@ -129,7 +129,7 @@
            y="-222.64693"
            style="font-size:48px;stroke-width:0.75">Narkoosiks<tspan
    style="font-size:23.0632px"
-   id="tspan990"> </tspan>Valmis</tspan></text></g><g
+   id="tspan990"> </tspan>valmis</tspan></text></g><g
        inkscape:groupmode="layer"
        id="layer1"
        inkscape:label="btn_up"
@@ -367,4 +367,4 @@
            style="font-size:16.65px;text-align:center;text-anchor:middle;stroke-width:0.260155"
            sodipodi:role="line">Narkoosiks<tspan
    style="font-size:8px;word-spacing:-0.015px"
-   id="tspan964"> </tspan>Valmis</tspan></text></g></g></svg>
+   id="tspan964"> </tspan>valmis</tspan></text></g></g></svg>
