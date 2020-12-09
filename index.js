@@ -247,8 +247,7 @@ function playFromStart(){
 
 function toggleSound(){
   if(isFirstPlay){
-    isFirstPlay = false;
-    video.currentTime = 0;
+    goToChapter("a_intro");
     controlsLeft.className = "controls-left";
   }
   if(video.muted){
